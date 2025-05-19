@@ -1,21 +1,24 @@
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 20px 170px;
 }
-.nav-menu{
+
+.nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 60px;
     font-size: 20px;
 }
+
 .navbar img {
     width: 250px;
     height: auto;
 }
-.nav-connect{
+
+.nav-connect {
     padding: 20px 40px;
     border-radius: 50px;
     background: linear-gradient(267deg, #00ff00, #00BFFF);
@@ -26,33 +29,135 @@
     color: black;
     font-weight: bold;
 }
-.nav-connect:hover{
+
+.nav-connect:hover {
     transform: scale(1.05);
 }
-.nav-menu li{
+
+.nav-menu li {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.nav-menu li img{
-    display: flex;
+
+.nav-menu li img {
     width: 100px;
     height: auto;
     margin: auto;
+    display: flex;
 }
+
 .nav-menu a {
-    color: white; /* Default renk beyaz */
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #00BFFF; /* İstersen hover rengi */
+    color: #00BFFF;
 }
 
-/* Aktif menüde (menu === 'x') özel renk (örneğin degrade) */
 .nav-menu a.active,
 .nav-menu a.active img {
-    /* Eğer aktif rengi degrade yapmak istersen veya başka stil */
-    color: #00BFFF; /* Örnek: açık mavi */
+    color: #00BFFF;
+}
+
+.nav-mob-close {
+    display: none;
+}
+
+.nav-mob-open {
+    display: none;
+}
+
+/* ======= Responsive for mobile ======= */
+@media (max-width: 768px) {
+    .navbar {
+        margin: 20px 50px;
+    }
+    .nav-connect {
+        display: none;
+    }
+
+    /* Hamburger (menu open) icon */
+    .nav-mob-open {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        width: 30px !important;
+        height: 30px !important;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        z-index: 1003;
+        opacity: 1; /* Açıkken tam görünür */
+        transition: opacity 0.3s ease;
+    }
+    /* Menü açıkken ikon gizlensin */
+    .nav-mob-open.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-mob-open img {
+        width: 30px !important;
+        height: 30px !important;
+        object-fit: contain;
+    }
+
+    /* Close icon */
+    .nav-mob-close {
+        display: flex; /* Görünsün ama konumu sağlanacak JS ile */
+        position: fixed;
+        top: 20px;
+        right: -250px; /* Başlangıçta menü ile aynı pozisyonda gizli */
+        width: 30px !important;
+        height: 30px !important;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        z-index: 1004;
+        transition: right 0.5s ease;
+    }
+
+    .nav-mob-close img {
+        width: 30px !important;
+        height: 30px !important;
+        object-fit: contain;
+    }
+
+    /* Menü */
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 0;
+        gap: 20px;
+        background-color: black;
+        width: 250px;
+        height: 100%;
+        z-index: 1000;
+        transition: right 0.5s ease;
+        right: -250px; /* Başlangıçta görünmez */
+        padding-left: 30px;
+        padding-top: 70px;
+    }
+
+    .nav-menu li {
+        font-size: 20px;
+        padding-left: 0;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    /* Menü açılınca menüyü sağa getir */
+    .nav-menu.open {
+        right: 0;
+    }
+
+    /* Kapama butonunu menü açıkken menüyle birlikte sağa getir */
+    .nav-mob-close.open {
+        right: 30px;
+    }
 }

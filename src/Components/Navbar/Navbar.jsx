@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import header_logo from '../../assets/header_logo.png';
 import underline_navbar from '../../assets/underline.png';
+import menu_open from '../../assets/menu_open.svg';
+import menu_close from '../../assets/menu_close.svg';
 
 const Navbar = () => {
     const [menu, setMenu] = useState('home');
-    const [menuOpen, setMenuOpen] = useState(false);  // Hamburger menü durumu
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    // Scroll yapıldığında aktif menüyü güncellemek için
     useEffect(() => {
         const handleScroll = () => {
             const sections = ['home', 'about', 'services', 'projects', 'contact'];
             let current = 'home';
 
-            sections.forEach((section) => {
+            sections.forEach(section => {
                 const element = document.getElementById(section);
                 if (element) {
                     const top = element.getBoundingClientRect().top;
@@ -30,61 +31,67 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Menü açılıp kapanınca scroll olunca menüyü kapatabiliriz
     useEffect(() => {
         const closeMenuOnScroll = () => {
-            if(menuOpen) setMenuOpen(false);
+            if (menuOpen) setMenuOpen(false);
         };
         window.addEventListener('scroll', closeMenuOnScroll);
         return () => window.removeEventListener('scroll', closeMenuOnScroll);
     }, [menuOpen]);
 
+    const openMenu = () => setMenuOpen(true);
+    const closeMenu = () => setMenuOpen(false);
+
     return (
         <div className="navbar">
             <img src={header_logo} alt="Site Logo" className="nav-logo" />
 
-            {/* Hamburger ikon (mobilde gözükecek) */}
-            <div
-                className={`nav-hamburger ${menuOpen ? 'open' : ''}`}
-                onClick={() => setMenuOpen(!menuOpen)}
-                aria-label="Toggle menu"
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => { if(e.key === 'Enter') setMenuOpen(!menuOpen) }}
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            {/* Hamburger Menü Açma İkonu */}
+            <img
+                src={menu_open}
+                onClick={openMenu}
+                alt="Open Menu"
+                className={`nav-mob-open ${menuOpen ? 'hidden' : ''}`}
+            />
 
             {/* Menü */}
-            <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+            <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
+                {/* Menü kapatma ikonu */}
+                {menuOpen && (
+                    <img
+                        src={menu_close}
+                        onClick={closeMenu}
+                        alt="Close Menu"
+                        className={`nav-mob-close ${menuOpen ? 'open' : ''}`}
+                    />
+                )}
+
                 <li>
-                    <a href="#home" onClick={() => {setMenu('home'); setMenuOpen(false);}}>
+                    <a href="#home" onClick={() => { setMenu('home'); closeMenu(); }}>
                         Ana Sayfa
                         {menu === 'home' && <img src={underline_navbar} alt="underline" />}
                     </a>
                 </li>
                 <li>
-                    <a href="#about" onClick={() => {setMenu('about'); setMenuOpen(false);}}>
+                    <a href="#about" onClick={() => { setMenu('about'); closeMenu(); }}>
                         Ben Kimim?
                         {menu === 'about' && <img src={underline_navbar} alt="underline" />}
                     </a>
                 </li>
                 <li>
-                    <a href="#services" onClick={() => {setMenu('services'); setMenuOpen(false);}}>
+                    <a href="#services" onClick={() => { setMenu('services'); closeMenu(); }}>
                         Neler Yapabilirim?
                         {menu === 'services' && <img src={underline_navbar} alt="underline" />}
                     </a>
                 </li>
                 <li>
-                    <a href="#projects" onClick={() => {setMenu('projects'); setMenuOpen(false);}}>
+                    <a href="#projects" onClick={() => { setMenu('projects'); closeMenu(); }}>
                         Projelerim
                         {menu === 'projects' && <img src={underline_navbar} alt="underline" />}
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" onClick={() => {setMenu('contact'); setMenuOpen(false);}}>
+                    <a href="#contact" onClick={() => { setMenu('contact'); closeMenu(); }}>
                         İletişim
                         {menu === 'contact' && <img src={underline_navbar} alt="underline" />}
                     </a>
@@ -93,7 +100,9 @@ const Navbar = () => {
 
             <div className="nav-connect" onClick={() => {
                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-            }}>Benimle İletişime Geç</div>
+            }}>
+                Benimle İletişime Geç
+            </div>
         </div>
     );
 };
