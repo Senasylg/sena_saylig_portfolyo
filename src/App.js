@@ -6,6 +6,8 @@ import Services from './Components/Services/Services.jsx'
 import Projects from './Components/Projects/Projects.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import Footer from './Components/Footer/Footer.jsx'
+import Theme from './Components/Toast.jsx'
+import ScrollToTop from'./Components/ScrollToTopOnLoad.jsx'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Projects/>
         <Contact/>
         <Footer/>
+        <Theme/>
+        <ScrollToTop/>
     </div>
 
   );
