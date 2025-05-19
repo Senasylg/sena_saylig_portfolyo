@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef } from 'react';
 import './Contact.css'
 import theme_pattern from '../../assets/pattern_green_small.png'
 import mail_icon from '../../assets/mail_icon.svg'
@@ -8,6 +8,40 @@ import linkedin_icon from '../../assets/linkedin_icon.png'
 import github_icon from '../../assets/github_icon.png'
 
 const Contact = () => {
+    const [sent, setSent] = useState(false);
+    const buttonRef = useRef(null);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Ripple effect yarat
+        const button = buttonRef.current;
+        const circle = document.createElement("span");
+        const diameter = Math.max(button.clientWidth, button.clientHeight);
+        const radius = diameter / 2;
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${e.clientX - button.offsetLeft - radius}px`;
+        circle.style.top = `${e.clientY - button.offsetTop - radius}px`;
+        circle.classList.add("ripple");
+
+        // Daha önce varsa temizle
+        const ripple = button.getElementsByClassName("ripple")[0];
+        if (ripple) {
+            ripple.remove();
+        }
+
+        button.appendChild(circle);
+
+        // Mesaj gönderildi durumunu aktif et
+        setSent(true);
+
+        // 5 saniye sonra mesajı kapat
+        setTimeout(() => setSent(false), 5000);
+
+        // Form temizlenebilir (opsiyonel)
+        e.target.reset();
+    };
+
     return (
         <div id="contact" className="contact">
             <div className="contact-title">
@@ -50,18 +84,22 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <form className="contact-right">
-                    <label htmlFor=""> Ad-Soyad</label>
-                    <input type="text" placeholder="İsminizi Giriniz" name="name"/>
-                    <label htmlFor=""> E-mail Adresi</label>
-                    <input type="email" placeholder="E-mail Adresinizi Giriniz" name="email"/>
-                    <label htmlFor=""> Mesaj Yaz</label>
-                    <textarea name="message" rows="10" placeholder="Mesajınızı Giriniz"></textarea>
-                    <button type = "submit" className="contact-submit">Gönder</button>
+                <form className="contact-right" onSubmit={handleSubmit}>
+                    <label> Ad-Soyad</label>
+                    <input type="text" placeholder="İsminizi Giriniz" name="name" required />
+                    <label> E-mail Adresi</label>
+                    <input type="email" placeholder="E-mail Adresinizi Giriniz" name="email" required />
+                    <label> Mesaj Yaz</label>
+                    <textarea name="message" rows="10" placeholder="Mesajınızı Giriniz" required></textarea>
+
+                    <div className="submit-wrapper">
+                        <button ref={buttonRef} type="submit" className="contact-submit">Gönder</button>
+                        {sent && <p className="sent-message">Mesaj gönderilmiştir.</p>}
+                    </div>
                 </form>
             </div>
         </div>
     )
 }
 
-export default Contact
+export default Contact;

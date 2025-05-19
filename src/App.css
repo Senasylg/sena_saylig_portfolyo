@@ -57,3 +57,29 @@
   background: linear-gradient(267deg, #00BFFF, #00ff00);
 }
 
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #00ff00, #00BFFF);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.2s ease-out;
+}
+
+#progressNumber {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #00BFFF;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 8px;
+  border-radius: 12px;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 9999;
+  pointer-events: none;
+}

@@ -46,6 +46,7 @@ const Person = () => {
             <h1>
                 <span style={{ color: "#00BFFF" }}>{coloredName}</span>
                 <span style={{ color: "white" }}>{normalText}</span>
+                <span className="blinking-cursor">|</span>
             </h1>
             <p>
                 Balıkesir Üniversitesi'nde Endüstri ve Bilgisayar Mühendisliği'ni birlikte yürüten çift ana dal öğrencisiyim. Bu iki disiplinin bana kazandırdığı eşsiz perspektif sayesinde, teknoloji ve sistemleri daha akıllı ve verimli hale getirmek için çalışıyorum.
