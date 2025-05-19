@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+/* Scrollbar genişliği */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Scrollbar track (arka plan) */
+::-webkit-scrollbar-track {
+  background: black; /* ya da sayfanın arka plan rengi */
+}
+
+/* Scrollbar thumb (kaydırıcı) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(267deg, #00ff00 -5.09%, #00BFFF 106.28%);
+  border-radius: 10px;
+}
+
+/* Scrollbar thumb hover efekti */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(267deg, #00BFFF, #00ff00);
+}
+

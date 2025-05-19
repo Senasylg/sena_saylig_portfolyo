@@ -1,0 +1,58 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+.navbar img {
+    width: 250px;
+    height: auto;
+}
+.nav-connect{
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #00ff00, #00BFFF);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.nav-connect:hover{
+    transform: scale(1.05);
+}
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.nav-menu li img{
+    display: flex;
+    width: 100px;
+    height: auto;
+    margin: auto;
+}
+.nav-menu a {
+    color: white; /* Default renk beyaz */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #00BFFF; /* İstersen hover rengi */
+}
+
+/* Aktif menüde (menu === 'x') özel renk (örneğin degrade) */
+.nav-menu a.active,
+.nav-menu a.active img {
+    /* Eğer aktif rengi degrade yapmak istersen veya başka stil */
+    color: #00BFFF; /* Örnek: açık mavi */
+}
