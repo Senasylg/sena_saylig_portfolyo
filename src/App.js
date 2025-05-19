@@ -8,6 +8,7 @@ import Contact from './Components/Contact/Contact.jsx'
 import Footer from './Components/Footer/Footer.jsx'
 import Theme from './Components/Toast.jsx'
 import ScrollToTop from'./Components/ScrollToTopOnLoad.jsx'
+import ScrollTopButton from "./Components/ ScrollTopButton.jsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Footer/>
         <Theme/>
         <ScrollToTop/>
+        <ScrollTopButton/>
     </div>
 
   );
