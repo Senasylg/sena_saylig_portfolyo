@@ -85,3 +85,44 @@
         cursor: pointer;
     }
 }
+
+@media (max-width: 480px) {
+    .projects {
+        margin: 40px 15px;
+        gap: 40px;
+        padding: 0 10px;
+    }
+    .projects-title {
+        margin-bottom: -10px;
+    }
+    .projects-title h1 {
+        font-size: 28px;
+        padding: 0;
+        text-align: center;
+    }
+    .projects-title img {
+        position: absolute;
+        top: 40px;
+        left: -40px;
+        bottom: 0;
+        width: 40px;
+        height: auto;
+        transform: translate(-20%, 20%);
+    }
+    .projects-container {
+        grid-template-columns: 1fr; /* Tek sütun */
+        gap: 20px;
+    }
+    .projects-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .projects-showMore {
+        padding: 12px 25px;
+        font-size: 14px;
+        margin: 20px auto 10px;
+        justify-content: center;
+        gap: 12px;
+    }
+}

@@ -99,3 +99,56 @@
         gap: 30px;
     }
 }
+
+@media (max-width: 480px) {
+    .services {
+        margin: 20px 15px;
+        gap: 50px;
+        padding: 0 10px;
+    }
+    .services-title h1 {
+        font-size: 32px;
+        padding: 0;
+        text-align: center;
+    }
+    .services-title img {
+        position: absolute;
+        top: 15px;
+        left: -40px;
+        bottom: 0;
+        width: 40px;
+        height: auto;
+        transform: translate(-20%, 20%);
+    }
+    .services-container {
+        grid-template-columns: 1fr; /* Tek sütun */
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+    .services-format {
+        padding: 20px;
+        gap: 8px;
+        max-width: 100%;
+    }
+    .services-format h3 {
+        font-size: 24px;
+    }
+    .services-format h2 {
+        font-size: 24px;
+    }
+    .services-format p {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 100%;
+    }
+    .services-readmore {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    .services-readmore p {
+        font-size: 14px;
+    }
+    .services-readmore img {
+        width: 18px;
+    }
+}
