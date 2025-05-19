@@ -49,9 +49,9 @@ const Person = () => {
                 <span className="blinking-cursor">|</span>
             </h1>
             <p>
-                Balıkesir Üniversitesi'nde Endüstri ve Bilgisayar Mühendisliği'ni birlikte yürüten çift ana dal öğrencisiyim. Bu iki disiplinin bana kazandırdığı eşsiz perspektif sayesinde, teknoloji ve sistemleri daha akıllı ve verimli hale getirmek için çalışıyorum.
+                Balıkesir Üniversitesi’nde Endüstri ve Bilgisayar Mühendisliği çift ana dal öğrencisiyim. Bu iki disiplinin bana kazandırdığı eşsiz perspektif sayesinde, teknoloji ve sistemleri daha akıllı ve verimli hale getirmek için çalışıyorum.
                 Endüstri mühendisliğinin sistem odaklı düşünme becerileriyle, bilgisayar mühendisliğinin kodlama ve analiz yeteneklerini bir araya getiriyorum. Bu sentez, bana karmaşık problemleri hem geniş açıdan görebilme hem de teknik detaylarıyla çözümleyebilme gücü veriyor.
-                Öğrenme yolculuğumda edindiğim bilgileri gerçek dünya uygulamalarına dönüştürmekten büyük heyecan duyuyorum. Amacım, sürdürülebilir ve yenilikçi çözümler üreterek mühendisliğin sınırlarını keşfetmek.
+                Öğrenme yolculuğumda edindiğim bilgileri pratik ve somut projelere dönüştürmekten büyük heyecan duyuyorum. Amacım, sürdürülebilir ve yenilikçi çözümler üreterek mühendisliğin sınırlarını keşfetmek.
             </p>
             <div className="person-action">
                 <div
