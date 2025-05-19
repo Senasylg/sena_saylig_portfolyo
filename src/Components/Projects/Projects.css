@@ -4,13 +4,14 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 100px 170px;
+    margin: 80px 170px;
 }
 .projects-title{
     position: relative;
+    margin-bottom: -30px;
 }
 .projects-title h1{
-    padding: 5px 30px;
+    padding: 0px 30px;
     font-size: 50px;
     font-weight: 600;
     margin-top: 50px;
@@ -24,8 +25,7 @@
 .projects-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 80px;
+    gap: 30px;
 }
 .projects-container img{
     box-sizing: border-box;
@@ -41,19 +41,21 @@
     border-radius: 10px;
     transition: 0.3s;
 }
-.projects-showMore{
+.projects-showMore {
     display: flex;
-    gap: 20px;
-    border-radius: 50px;
+    gap: 10px;
+    border-radius: 30px;
     border: 2px solid #fff;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 50px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: -70px;
     transition: 0.6s;
     cursor: pointer;
 }
-.projects-showMore:hover{
+
+.projects-showMore:hover {
     gap: 20px;
     transition: 0.6s;
 }
