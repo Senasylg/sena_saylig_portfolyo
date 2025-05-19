@@ -10,13 +10,6 @@ const Footer = () => {
                 <div className="footer-top-left">
                     <img src={footer_logo} alt=""/>
                 </div>
-                <div className="footer-top-right">
-                    <div className="footer-email-input">
-                        <img src={user_icon} alt=""/>
-                        <input type="email" placeholder="E-mail Adresinizi Giriniz"/>
-            </div>
-                    <div className="footer-subscribe">Subscribe</div>
-                </div>
             </div>
             <hr/>
             <div className="footer-bottom">

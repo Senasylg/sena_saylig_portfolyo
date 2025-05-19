@@ -37,15 +37,6 @@
     font-family: "outfit", sans-serif;
     font-size: 20px;
 }
-.footer-subscribe{
-    font-size: 20px;
-    padding: 22px 30px;
-    border-radius: 50px;
-    background: linear-gradient(267deg, #00ff00 -5.09%, #00BFFF 106.28%);
-    cursor: pointer;
-    transition: 0.3s;
-    color: black
-}
 .footer-bottom{
     display: flex;
     justify-content: space-between;
@@ -59,7 +50,19 @@
 .footer-email-input:hover{
     border: 2px solid #fff;
 }
-.footer-subscribe:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
+
+@media(max-width: 768px){
+    .footer{
+        margin: 50px 70px;
+    }
+    .footer-top{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-bottom{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
 }

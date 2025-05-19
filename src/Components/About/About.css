@@ -138,10 +138,15 @@
     font-weight: 500;
 }
 
-/* Responsive tasarım */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .about {
-        margin: 60px 40px;
+        gap: 80px;
+        margin: 50px 70px;
+        align-items: center;
+    }
+
+    .about-title h1{
+        font-size: 50px;
     }
 
     .about-sections {
@@ -154,8 +159,9 @@
         height: auto;
     }
 
-    .about-right {
-        width: 100%;
+    .about-para{
+        font-size: 18px;
+        line-height: 25px;
     }
 
     .about-skill {
@@ -166,23 +172,32 @@
 
     .about-skill p {
         min-width: unset;
+        font-size: 16px;
     }
 
     .about-skill hr {
         width: 100%;
+        height: 4px;
     }
 
     .about-achievements {
+        justify-content: space-between;
         flex-direction: column;
         align-items: center;
         gap: 40px;
     }
 
+    .about-achievement {
+        gap:10px;
+    }
+
     .about-achievement h1 {
         font-size: 40px;
+        font-weight: 700;
     }
 
     .about-achievement p {
+        text-align: center;
         font-size: 18px;
     }
 }

@@ -214,3 +214,45 @@
     transform: scale(1.05);
     transition: 0.3s;
 }
+
+@media (max-width: 768px) {
+    .contact{
+        gap: 50px;
+        margin: 50px 70px;
+        align-items: center;
+    }
+    .contact-title h1{
+        font-size: 50px;
+        font-weight: 600;
+    }
+    .contact-section{
+        flex-direction: column;
+    }
+    .contact-left h1{
+        font-size: 50px;
+    }
+    .contact-left p{
+        font-size: 18px;
+    }
+    .contact-detail{
+        gap: 20px;
+    }
+    .contact-detail img{
+        width: 25px;
+    }
+    .contact-right label{
+        font-size: 18px;
+    }
+    .contact-right input{
+        width: 100%;
+        font-size: 20px;
+    }
+    .contact-right textarea{
+        width: 100%;
+        font-size: 18px;
+    }
+    .contact-submit{
+        font-size: 20px;
+        padding: 15px 40px;
+    }
+}

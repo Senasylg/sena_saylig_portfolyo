@@ -69,3 +69,33 @@
     transform: scale(1.05);
     transition: 0.4s;
 }
+
+@media(max-width: 768px){
+    .services{
+        align-items: center;
+        gap:70px;
+        margin: 20px 70px;
+    }
+    .services-title h1{
+        font-size: 50px;
+    }
+    .services-format{
+        gap: 10px;
+        padding: 28px;
+    }
+    .services-format h2{
+        font-size: 28px;
+    }
+    .services-format p{
+        font-size: 18px;
+        line-height: 22px;
+        max-width: 350px;
+    }
+    .services-readmore img{
+        width: 20px;
+    }
+    .services-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
