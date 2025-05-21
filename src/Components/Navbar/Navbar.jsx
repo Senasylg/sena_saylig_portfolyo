@@ -86,7 +86,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <a href="#projects" onClick={() => { setMenu('projects'); closeMenu(); }}>
-                        Projelerim
+                        Portfolyo
                         {menu === 'projects' && <img src={underline_navbar} alt="underline" />}
                     </a>
                 </li>

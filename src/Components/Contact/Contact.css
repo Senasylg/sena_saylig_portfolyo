@@ -1,36 +1,36 @@
-.contact{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     gap: 80px;
-     margin: 100px 170px;
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 100px 170px;
 }
-.contact-title{
+.contact-title {
     position: relative;
 }
-.contact-title h1{
+.contact-title h1 {
     padding: 5px 30px;
     font-size: 50px;
     font-weight: 600;
     margin-top: 50px;
 }
-.contact-title img{
+.contact-title img {
     position: absolute;
     bottom: 0;
     left: -45px;
     z-index: 0;
 }
-.contact-section{
+.contact-section {
     display: flex;
     gap: 150px;
 }
-.contact-left{
+.contact-left {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.contact-left h1{
+.contact-left h1 {
     font-size: 40px;
     font-weight: 600;
     background: linear-gradient(267deg, #00ff00 -5.09%, #00BFFF 106.28%);
@@ -38,59 +38,55 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.contact-left p{
+.contact-left p {
     max-width: 500px;
     color: antiquewhite;
     font-size: 20px;
     line-height: 40px;
 }
-.contact-details{
+.contact-details {
     display: flex;
     flex-direction: column;
     gap: 20px;
     color: antiquewhite;
     font-size: 20px;
 }
-.contact-detail{
+.contact-detail {
     display: flex;
     gap: 20px;
     align-items: center;
 }
-.contact-right{
+.contact-right {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 20px;
     width: 500px;
 }
-.contact-right label{
+.contact-right label {
     color: antiquewhite;
     font-size: 20px;
     font-weight: 500;
 }
-.contact-right input{
-    border: none;
+.contact-right input,
+.contact-right textarea {
     width: 100%;
-    height: 50px;
-    padding-left: 20px;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(267deg, #00ff00 -5.09%, #00BFFF 106.28%);
     border-radius: 5px;
     background: #282c34;
     color: #a0a0a0;
     font-family: 'outfit', sans-serif;
     font-size: 20px;
     box-sizing: border-box;
+    padding-left: 20px;
 }
-.contact-right textarea{
-    border: none;
-    width: 100%;
+.contact-right input {
+    height: 50px;
+}
+.contact-right textarea {
     padding-top: 10px;
-    padding-left: 20px;
-    border-radius: 5px;
-    background: #282c34;
-    color: #a0a0a0;
-    font-family: 'outfit', sans-serif;
-    font-size: 20px;
-    box-sizing: border-box;
 }
 .contact-submit {
     border: none;
@@ -105,53 +101,51 @@
     transition: 0.3s;
     width: 100%;
 }
-
-.contact-submit:hover{
+.contact-submit:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
-
 .submit-wrapper {
     width: 100%;
 }
 
 @media (max-width: 768px) {
-    .contact{
+    .contact {
         gap: 50px;
         margin: 50px 70px;
         align-items: center;
     }
-    .contact-title h1{
+    .contact-title h1 {
         font-size: 50px;
         font-weight: 600;
     }
-    .contact-section{
+    .contact-section {
         flex-direction: column;
     }
-    .contact-left h1{
+    .contact-left h1 {
         font-size: 50px;
     }
-    .contact-left p{
+    .contact-left p {
         font-size: 18px;
     }
-    .contact-detail{
+    .contact-detail {
         gap: 20px;
     }
-    .contact-detail img{
+    .contact-detail img {
         width: 25px;
     }
-    .contact-right label{
+    .contact-right label {
         font-size: 18px;
     }
-    .contact-right input{
+    .contact-right input {
         width: 100%;
         font-size: 20px;
     }
-    .contact-right textarea{
+    .contact-right textarea {
         width: 100%;
         font-size: 18px;
     }
-    .contact-submit{
+    .contact-submit {
         font-size: 20px;
         padding: 15px 40px;
     }
@@ -225,6 +219,9 @@
         font-size: 16px;
         padding-left: 15px;
         height: 45px;
+        border: 2px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(267deg, #00ff00 -5.09%, #00BFFF 106.28%);
     }
     .contact-right textarea {
         padding-top: 10px;

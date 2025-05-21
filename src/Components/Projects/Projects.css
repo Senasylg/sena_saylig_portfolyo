@@ -1,85 +1,185 @@
-.projects{
+.projects {
+    margin: 80px auto;
+    max-width: 1500px; /* max genişlik artırıldı */
+    padding: 0 40px; /* padding biraz artırıldı */
+    gap: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
 }
-.projects-title{
+
+.projects-title {
     position: relative;
     margin-bottom: -30px;
 }
-.projects-title h1{
-    padding: 0px 30px;
+
+.projects-title h1 {
+    padding: 0 30px;
     font-size: 50px;
     font-weight: 600;
     margin-top: 50px;
 }
-.projects-title img{
+
+.projects-title img {
     position: absolute;
     bottom: 0;
     left: -45px;
     z-index: 0;
 }
-.projects-container{
+
+.projects-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* gap biraz artırıldı */
+    width: 100%;
 }
-.projects-container img{
-    box-sizing: border-box;
-    width: 90%;
-    height: 90%;
-    transition: all 0.3s ease;
+
+/* Kart sistemi */
+.project-card {
+    background-color: #f5f9ff;
+    border-radius: 12px;
+    box-shadow:
+            0 2px 6px rgba(0, 0, 0, 0.12),
+            4px 4px 15px rgba(0, 122, 204, 0.12);
+    overflow: hidden;
     cursor: pointer;
-    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-.projects-container img:hover{
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+            0 6px 12px rgba(0, 0, 0, 0.18),
+            6px 6px 25px rgba(0, 122, 204, 0.25);
+}
+
+/* Resim kapsayıcı */
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* yükseklik biraz artırıldı */
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Renk süzmesi overlay */
+.project-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 122, 204, 0.15);
+    pointer-events: none;
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.project-card:hover .project-image-container::before {
+    background: rgba(0, 122, 204, 0.30);
+}
+
+.project-image {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
     transform: scale(1.05);
-    border: 4px solid #00BFFF;
-    border-radius: 10px;
-    transition: 0.3s;
 }
+
+.project-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #007acc;
+}
+
+.project-description {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.project-tools {
+    font-size: 13px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Daha Fazlasını Göster Butonu */
 .projects-showMore {
     display: flex;
     gap: 10px;
     border-radius: 30px;
-    border: 2px solid #fff;
+    background-color: #007acc;
     padding: 15px 30px;
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 10px;
     margin-top: -70px;
-    transition: 0.6s;
+    transition: gap 0.6s, background-color 0.3s ease;
     cursor: pointer;
+    color: #fff !important;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 122, 204, 0.4);
 }
 
 .projects-showMore:hover {
     gap: 20px;
-    transition: 0.6s;
+    background-color: #005f99;
+    transition: gap 0.6s, background-color 0.3s ease;
 }
 
-@media(max-width: 768px){
-    .projects{
+.projects-showMore img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive Tasarımlar */
+@media (max-width: 1200px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        margin: 50px 30px;
+        padding: 0 20px;
         gap: 50px;
-        margin: 50px 70px;
-        align-items: center;
     }
-    .projects-title h1{
-        font-size: 50px;
-        font-weight: 600;
-    }
-    .projects-container{
-        grid-template-columns: 1fr 1fr;
+    .projects-container {
+        grid-template-columns: 1fr;
         gap: 30px;
     }
-    .projects-container img{
-        width: 100%;
-        height: 100%;
+    .project-image-container {
+        height: 180px; /* tablet için biraz daha büyük */
     }
-    .projects-showMore{
-        padding: 20px 40px;
+    .projects-showMore {
+        padding: 20px 50px;
         font-size: 18px;
         margin: 30px auto;
         cursor: pointer;
@@ -88,9 +188,9 @@
 
 @media (max-width: 480px) {
     .projects {
-        margin: 40px 15px;
+        margin: 40px 20px;
+        padding: 0 15px;
         gap: 40px;
-        padding: 0 10px;
     }
     .projects-title {
         margin-bottom: -10px;
@@ -110,13 +210,11 @@
         transform: translate(-20%, 20%);
     }
     .projects-container {
-        grid-template-columns: 1fr; /* Tek sütun */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
-    .projects-container img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
+    .project-image-container {
+        height: 140px;
     }
     .projects-showMore {
         padding: 12px 25px;
