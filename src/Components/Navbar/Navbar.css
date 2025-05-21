@@ -73,6 +73,25 @@
 }
 
 /* ===== Responsive Tasarımlar ===== */
+@media (max-width: 1400px) {
+    .navbar {
+        padding: 0 50px; /* Daha geniş padding */
+    }
+    .nav-menu {
+        gap: 40px; /* Menü elemanları arasındaki mesafeyi artırdık */
+        font-size: 20px; /* Yazı boyutu biraz büyütüldü */
+    }
+    .navbar img {
+        width: 200px; /* Logo biraz daha büyük */
+    }
+    .nav-menu li img {
+        width: 100px; /* Menü içi ikonlar biraz büyütüldü */
+    }
+    .nav-connect {
+        padding: 20px 45px; /* Buton ya da bağlantı paddingi büyütüldü */
+        font-size: 16px;
+    }
+}
 
 @media (max-width: 1200px) {
     .navbar {
@@ -118,6 +137,13 @@
     .navbar {
         margin: 20px 30px;
         padding: 0 15px;
+    }
+
+    .navbar img {
+        width: 220px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     .nav-connect {

@@ -317,12 +317,16 @@
         line-height: 1.4;
     }
     .projects-showMore {
+        margin-top: -15px; /* Çok küçük değer */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
         padding: 12px 25px;
         font-size: 14px;
-        margin: 20px auto 10px;
         justify-content: center;
         gap: 12px;
     }
+
 }
 
 /* 481px - 768px arası - Tablet ve büyük telefonlar */
@@ -346,6 +350,7 @@
         font-size: 18px;
         margin: 30px auto;
         cursor: pointer;
+        margin-top: -15px; /* Çok küçük değer */
     }
 }
 

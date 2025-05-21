@@ -306,15 +306,23 @@
         gap: 15px;
         align-items: center;
         justify-content: center;
+        display: flex;
+        flex-direction: column;  /* Dikey liste */
+        gap: 12px;               /* Satırlar arası boşluk */
+        align-items: flex-start; /* Tüm liste sola yaslı */
     }
     .contact-detail {
+        display: flex;
+        align-items: center;     /* İkon ve yazıyı dikey ortala */
         gap: 15px;
-        justify-content: center;
+        justify-content: flex-start; /* Sola yasla */
     }
     .contact-detail img {
         width: 20px;
         height: 20px;
+        flex-shrink: 0;          /* İkonun küçülmesini engelle */
     }
+
     .contact-right {
         width: 100%;
         gap: 15px;
@@ -394,19 +402,25 @@
         padding: 0 10px;
     }
     .contact-details {
-        font-size: 14px;
-        gap: 15px;
-        align-items: center;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;  /* Dikey liste */
+        gap: 12px;               /* Satırlar arası boşluk */
+        align-items: flex-start; /* Tüm liste sola yaslı */
     }
+
     .contact-detail {
-        gap: 15px;
-        justify-content: center;
+        display: flex;
+        align-items: center;     /* İkon ve yazıyı dikey ortala */
+        gap: 10px;               /* İkon ile yazı arası boşluk */
+        justify-content: flex-start; /* Sola yasla */
     }
+
     .contact-detail img {
         width: 18px;
         height: 18px;
+        flex-shrink: 0;          /* İkonun küçülmesini engelle */
     }
+
     .contact-right {
         width: 100%;
         gap: 15px;
@@ -439,6 +453,7 @@
         padding: 12px 30px;
         height: 40px;
         margin-bottom: 25px;
+        margin-top: 15px;
         width: 100%;
     }
     .submit-wrapper {
