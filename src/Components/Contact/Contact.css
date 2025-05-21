@@ -247,3 +247,93 @@
         font-size: 14px;
     }
 }
+@media (max-width: 1024px) and (min-width: 769px) {
+    .contact {
+        gap: 60px;
+        margin: 70px 100px;
+    }
+
+    .contact-title h1 {
+        font-size: 44px;
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .contact-title img {
+        left: -35px;
+        width: 55px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-left {
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-left h1 {
+        font-size: 36px;
+    }
+
+    .contact-left p {
+        font-size: 18px;
+        line-height: 32px;
+        max-width: 90%;
+    }
+
+    .contact-details {
+        font-size: 18px;
+        gap: 18px;
+    }
+
+    .contact-detail {
+        gap: 18px;
+    }
+
+    .contact-detail img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contact-right {
+        width: 90%;
+        max-width: 600px;
+        gap: 18px;
+    }
+
+    .contact-right label {
+        font-size: 18px;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+        font-size: 18px;
+        padding-left: 18px;
+        padding-right: 18px;
+        height: 48px;
+    }
+
+    .contact-right textarea {
+        padding-top: 10px;
+        height: auto;
+    }
+
+    .contact-submit {
+        font-size: 18px;
+        padding: 14px 30px;
+        height: 48px;
+    }
+
+    .submit-wrapper {
+        width: 100%;
+    }
+
+    .sent-message {
+        font-size: 15px;
+    }
+}

@@ -66,3 +66,117 @@
     }
 
 }
+@media (max-width: 480px) {
+    .footer {
+        margin: 30px 20px;
+        gap: 30px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-top-left img {
+        width: 60%;
+        height: auto;
+    }
+
+    .footer-top-left p {
+        font-size: 16px;
+        max-width: 100%;
+        padding: 0 10px;
+        line-height: 26px;
+    }
+
+    .footer-top-right {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-email-input {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 15px 20px;
+        border-radius: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-email-input input {
+        font-size: 16px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        font-size: 16px;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .footer {
+        margin: 50px 100px;
+        gap: 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-top-left p {
+        font-size: 18px;
+        max-width: 90%;
+    }
+
+    .footer-top-left img {
+        width: 50%;
+    }
+
+    .footer-top-right {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-email-input {
+        padding: 18px 25px;
+        gap: 20px;
+        padding-right: 60px;
+    }
+
+    .footer-email-input input {
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .footer-bottom-right {
+        gap: 18px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}

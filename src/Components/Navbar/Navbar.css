@@ -225,3 +225,27 @@
         width: 60px;
     }
 }
+@media (max-width: 1024px) and (min-width: 769px) {
+    .navbar {
+        padding: 0 25px;
+        margin: 20px 50px;
+    }
+
+    .navbar img {
+        width: 180px;
+    }
+
+    .nav-menu {
+        gap: 40px;
+        font-size: 18px;
+    }
+
+    .nav-menu li img {
+        width: 80px;
+    }
+
+    .nav-connect {
+        padding: 16px 36px;
+        font-size: 15px;
+    }
+}

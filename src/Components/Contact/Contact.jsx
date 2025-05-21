@@ -6,6 +6,7 @@ import location_icon from '../../assets/location_icon.svg'
 import call_icon from '../../assets/call_icon.svg'
 import linkedin_icon from '../../assets/linkedin_icon.png'
 import github_icon from '../../assets/github_icon.png'
+import facebook_icon from '../../assets/facebook_icon.png'
 
 const Contact = () => {
     const [sent, setSent] = useState(false);
@@ -59,7 +60,7 @@ const Contact = () => {
                             </a><p>senasaylig@gmail.com</p>
                         </div>
                         <div className="contact-detail">
-                            <img src={call_icon} alt=""/> <p>+531 090 00 00</p>
+                            <img src={call_icon} alt=""/> <p>+531 087 13 99</p>
                         </div>
                         <div className="contact-detail">
                             <a
@@ -81,6 +82,12 @@ const Contact = () => {
                                 <img src={github_icon} alt="GitHub"/>
                             </a>
                             <p>Github Profil</p>
+                        </div>
+                        <div className="contact-detail">
+                            <a href="#" onClick={e => e.preventDefault()} target="_blank" rel="noopener noreferrer">
+                                <img src={facebook_icon} alt="Facebook" />
+                            </a>
+                            <p>Facebook Profil</p>
                         </div>
                     </div>
                 </div>

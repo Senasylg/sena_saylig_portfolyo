@@ -137,3 +137,39 @@
         font-size: 32px;
     }
 }
+@media (max-width: 1024px) and (min-width: 769px) {
+    .person img {
+        margin-top: 100px;
+        width: 220px;
+    }
+
+    .person h1 {
+        font-size: 42px;
+        width: 80%;
+        margin-top: 40px;
+    }
+
+    .person p {
+        width: 70%;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .person-action {
+        gap: 20px;
+        font-size: 18px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .person-connect,
+    .person-resume {
+        padding: 18px 32px;
+        font-size: 17px;
+    }
+
+    .blinking-cursor {
+        font-size: 36px;
+    }
+}
