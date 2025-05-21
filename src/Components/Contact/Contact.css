@@ -126,74 +126,6 @@
     width: 100%;
 }
 
-/* --------- Large screens 1440px+ --------- */
-@media (min-width: 1440px) {
-    .contact {
-        margin: 120px 250px;
-        gap: 100px;
-    }
-    .contact-title h1 {
-        font-size: 60px;
-        margin-top: 70px;
-        padding: 5px 40px;
-    }
-    .contact-title img {
-        left: -60px;
-        width: 70px;
-    }
-    .contact-section {
-        gap: 180px;
-    }
-    .contact-left h1 {
-        font-size: 48px;
-    }
-    .contact-left p {
-        font-size: 22px;
-        line-height: 44px;
-        max-width: 600px;
-    }
-    .contact-details {
-        font-size: 22px;
-        gap: 25px;
-    }
-    .contact-detail {
-        gap: 25px;
-    }
-    .contact-detail img {
-        width: 30px;
-        height: 30px;
-    }
-    .contact-right {
-        width: 600px;
-        gap: 25px;
-    }
-    .contact-right label {
-        font-size: 22px;
-    }
-    .contact-right input,
-    .contact-right textarea {
-        font-size: 22px;
-        padding-left: 25px;
-        padding-right: 25px;
-        height: 55px;
-    }
-    .contact-right textarea {
-        height: auto;
-    }
-    .contact-submit {
-        font-size: 22px;
-        padding: 0 30px;
-        height: 55px;
-        margin-bottom: 60px;
-    }
-    .submit-wrapper {
-        width: 100%;
-    }
-    .sent-message {
-        font-size: 16px;
-    }
-}
-
 /* --------- Desktop (1024px - 1439px) --------- */
 @media (max-width: 1439px) and (min-width: 1024px) {
     .contact {
@@ -206,8 +138,8 @@
         padding: 5px 35px;
     }
     .contact-title img {
-        left: -50px;
-        width: 60px;
+        left: -40px;
+        width: 65px;
     }
     .contact-section {
         gap: 150px;
@@ -269,8 +201,8 @@
         text-align: center;
     }
     .contact-title img {
-        left: -25px;
-        width: 45px;
+        left: -45px;
+        width: 55px;
         top: auto;
         bottom: 0;
     }

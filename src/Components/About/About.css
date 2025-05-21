@@ -272,7 +272,56 @@
         padding: 0 5px;
     }
 }
-@media (max-width: 1024px) and (min-width: 769px) {
+
+/* -------- Tablet (481px - 768px) -------- */
+@media (min-width: 481px) and (max-width: 768px) {
+    .about {
+        margin: 40px 60px;
+        gap: 60px;
+    }
+
+    .about-title h1 {
+        font-size: 36px;
+    }
+
+    .about-title img {
+        width: 50px;
+        left: -30px;
+        bottom: 5px;
+    }
+
+    .about-sections {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-left img {
+        width: 200px;
+    }
+
+    .about-para {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .about-skill p {
+        font-size: 14px;
+    }
+
+    .about-skill hr {
+        height: 4px;
+    }
+
+    .about-achievement h1 {
+        font-size: 32px;
+    }
+
+    .about-achievement p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
     .about {
         margin: 40px 60px;
         gap: 60px;
@@ -314,8 +363,13 @@
 
     .about-achievements {
         flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
+        gap: 40px;
+        justify-content: space-evenly;
+    }
+
+    .about-achievement {
+        flex: 1 1 200px; /* Minimum 200px genişlikte yayılabilir kutular */
+        max-width: 250px;
     }
 
     .about-achievement h1 {
@@ -326,3 +380,30 @@
         font-size: 16px;
     }
 }
+
+
+/* -------- Orta Ekranlar (1024px - 1439px) -------- */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .about {
+        margin: 40px 120px;
+        gap: 70px;
+    }
+
+    .about-title h1 {
+        font-size: 46px;
+    }
+
+    .about-title img {
+        width: 66px;
+    }
+
+    .about-left img {
+        width: 280px;
+    }
+
+    .about-para {
+        font-size: 19px;
+        line-height: 1.6;
+    }
+}
+

@@ -225,27 +225,50 @@
         width: 60px;
     }
 }
-@media (max-width: 1024px) and (min-width: 769px) {
-    .navbar {
-        padding: 0 25px;
-        margin: 20px 50px;
-    }
-
-    .navbar img {
-        width: 180px;
-    }
-
+@media (min-width: 769px) and (max-width: 1023px) {
     .nav-menu {
-        gap: 40px;
-        font-size: 18px;
-    }
-
-    .nav-menu li img {
-        width: 80px;
+        gap: 25px; /* Menü başlıkları arasındaki mesafe */
+        margin-left: 40px; /* Menü ile logo arası boşluk */
+        font-size: 16px;
     }
 
     .nav-connect {
-        padding: 16px 36px;
-        font-size: 15px;
+        padding: 10px 25px;
+        font-size: 14px;
+        border-radius: 50px;
+        background: linear-gradient(267deg, #00ff00, #00BFFF);
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: transform 0.3s ease;
+        margin-left: 30px; /* Menü ile buton arası mesafe */
+    }
+
+    .nav-connect:hover {
+        transform: scale(1.05);
     }
 }
+
+
+/* 1024px - 1439px arası */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .nav-connect {
+        padding: 14px 32px;
+        font-size: 15px;
+        border-radius: 50px;
+        background: linear-gradient(267deg, #00ff00, #00BFFF);
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-connect:hover {
+        transform: scale(1.05);
+    }
+}
+

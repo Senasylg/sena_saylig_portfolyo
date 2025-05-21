@@ -161,38 +161,74 @@
     filter: brightness(0) invert(1);
 }
 
-/* Responsive Tasarımlar */
-@media (max-width: 1200px) {
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 35px;
-    }
-}
+/* ---------- Responsive Tasarımlar ---------- */
 
-@media (max-width: 768px) {
+/* 320px ve altı - En küçük cihazlar */
+@media (max-width: 320px) {
     .projects {
-        margin: 50px 30px;
-        padding: 0 20px;
-        gap: 50px;
+        margin: 25px 10px;
+        padding: 0 10px;
+        gap: 25px;
+    }
+    .projects-title h1 {
+        font-size: 18px;
+        padding: 0 8px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .projects-title img {
+        left: -25px;
+        width: 28px;
+        top: 12px;
+        transform: translate(-10%, 15%);
+        bottom: auto;
+        position: absolute;
     }
     .projects-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        display: block;
+        gap: 18px;
+        width: 100%;
+    }
+    .project-card {
+        margin-bottom: 20px;
+        border-radius: 10px;
+        flex-direction: column !important;
+        display: flex !important;
+        height: auto !important;
     }
     .project-image-container {
-        height: 180px; /* tablet için biraz daha büyük */
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        height: 110px !important;
+        min-height: 110px !important;
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+    .project-info h2 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    .project-description {
+        font-size: 11px;
+        margin-bottom: 10px;
+        line-height: 1.25;
+    }
+    .project-tools {
+        font-size: 10px;
     }
     .projects-showMore {
-        padding: 20px 50px;
-        font-size: 18px;
-        margin: 30px auto;
-        cursor: pointer;
+        padding: 10px 18px;
+        font-size: 13px;
+        margin: 15px auto;
+        gap: 8px;
+    }
+    .projects-showMore img {
+        width: 15px;
+        height: 15px;
     }
 }
 
-@media (max-width: 480px) {
+/* 321px - 480px arası - Küçük telefonlar */
+@media (min-width: 321px) and (max-width: 480px) {
     .projects {
         margin: 40px 20px;
         padding: 0 15px;
@@ -222,7 +258,7 @@
         width: 100%;
     }
     .project-card {
-        overflow: hidden !important; /* radius görünmesi için hidden */
+        overflow: hidden !important;
         min-height: auto !important;
         height: auto !important;
         flex-direction: column !important;
@@ -238,7 +274,7 @@
         height: 140px !important;
         min-height: 140px !important;
         background-color: #f0f0f0;
-        overflow: hidden !important; /* radius çalışması için hidden */
+        overflow: hidden !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -288,64 +324,185 @@
         gap: 12px;
     }
 }
-@media (max-width: 1024px) and (min-width: 769px) {
+
+/* 481px - 768px arası - Tablet ve büyük telefonlar */
+@media (min-width: 481px) and (max-width: 768px) {
+    .projects {
+        margin: 50px 30px;
+        padding: 0 20px;
+        gap: 50px;
+    }
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .project-image-container {
+        height: 180px; /* tablet için biraz daha büyük */
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .projects-showMore {
+        padding: 20px 50px;
+        font-size: 18px;
+        margin: 30px auto;
+        cursor: pointer;
+    }
+}
+
+/* 769px - 1023px arası - Küçük dizüstü ve büyük tabletler */
+@media (min-width: 769px) and (max-width: 1023px) {
     .projects {
         margin: 60px 50px;
         padding: 0 30px;
         gap: 60px;
     }
-
     .projects-title h1 {
         font-size: 42px;
         padding: 0 20px;
         margin-top: 40px;
     }
-
     .projects-title img {
         left: -45px;
         width: 60px;
     }
-
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 35px;
     }
-
     .project-card {
         border-radius: 10px;
     }
-
     .project-image-container {
         height: 180px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
-
     .project-info {
         padding: 18px;
     }
-
     .project-info h2 {
         font-size: 20px;
     }
-
     .project-description {
         font-size: 13.5px;
         line-height: 1.5;
     }
-
     .project-tools {
         font-size: 12.5px;
     }
-
     .projects-showMore {
         padding: 18px 40px;
         font-size: 16px;
         margin-top: -40px;
         gap: 12px;
     }
-
     .projects-showMore img {
         width: 18px;
+    }
+}
+
+/* 1024px - 1439px arası - Orta ve büyük dizüstü bilgisayarlar */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .projects {
+        margin: 80px auto;
+        max-width: 1200px;
+        padding: 0 40px;
+        gap: 70px;
+    }
+    .projects-title h1 {
+        font-size: 48px;
+        padding: 0 25px;
+        margin-top: 45px;
+    }
+    .projects-title img {
+        left: -50px;
+        width: 65px;
+    }
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 38px;
+    }
+    .project-card {
+        border-radius: 12px;
+    }
+    .project-image-container {
+        height: 200px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .project-info {
+        padding: 20px;
+    }
+    .project-info h2 {
+        font-size: 22px;
+    }
+    .project-description {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .project-tools {
+        font-size: 13px;
+    }
+    .projects-showMore {
+        padding: 20px 45px;
+        font-size: 17px;
+        margin-top: -50px;
+        gap: 14px;
+    }
+    .projects-showMore img {
+        width: 20px;
+    }
+}
+
+/* 1440px ve üzeri - Büyük ekranlar */
+@media (min-width: 1440px) {
+    .projects {
+        margin: 80px auto;
+        max-width: 1500px; /* max genişlik artırıldı */
+        padding: 0 40px; /* padding biraz artırıldı */
+        gap: 80px;
+    }
+    .projects-title h1 {
+        font-size: 50px;
+        padding: 0 30px;
+        margin-top: 50px;
+    }
+    .projects-title img {
+        left: -45px;
+        width: 70px;
+    }
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    .project-card {
+        border-radius: 12px;
+    }
+    .project-image-container {
+        height: 200px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .project-info {
+        padding: 20px;
+    }
+    .project-info h2 {
+        font-size: 22px;
+    }
+    .project-description {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .project-tools {
+        font-size: 13px;
+    }
+    .projects-showMore {
+        padding: 15px 30px;
+        font-size: 16px;
+        margin-top: -70px;
+        gap: 10px;
+    }
+    .projects-showMore img {
+        width: 20px;
     }
 }
