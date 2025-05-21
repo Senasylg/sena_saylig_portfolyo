@@ -210,6 +210,8 @@
         width: 100%;
         gap: 15px;
         align-items: stretch;
+        min-width: 0;        /* Flex içindeki taşmayı engelle */
+        overflow: hidden;    /* Taşan içeriği gizle */
     }
     .contact-right label {
         font-size: 16px;
@@ -218,10 +220,15 @@
     .contact-right textarea {
         font-size: 16px;
         padding-left: 15px;
+        padding-right: 15px; /* Sağa padding ekledik */
         height: 45px;
         border: 2px solid;
         border-image-slice: 1;
         border-image-source: linear-gradient(267deg, #00ff00 -5.09%, #00BFFF 106.28%);
+        box-sizing: border-box; /* Taşmayı engeller */
+        max-width: 100%;        /* Taşmayı engeller */
+        overflow: visible;
+        white-space: normal;   /* Satır taşmasını önler */
     }
     .contact-right textarea {
         padding-top: 10px;

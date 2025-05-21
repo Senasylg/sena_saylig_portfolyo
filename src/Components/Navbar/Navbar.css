@@ -2,7 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 170px;
+    max-width: 1400px;
+    margin: 20px auto; /* Ortala */
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
 .nav-menu {
@@ -11,15 +14,19 @@
     list-style: none;
     gap: 60px;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar img {
-    width: 250px;
+    width: 220px;
+    max-width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 .nav-connect {
-    padding: 20px 40px;
+    padding: 18px 40px;
     border-radius: 50px;
     background: linear-gradient(267deg, #00ff00, #00BFFF);
     font-size: 16px;
@@ -28,6 +35,7 @@
     text-decoration: none;
     color: black;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .nav-connect:hover {
@@ -51,7 +59,7 @@
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
-    position: relative; /* Alt çizgi için */
+    position: relative;
     padding-bottom: 5px;
 }
 
@@ -59,34 +67,64 @@
     color: #00BFFF;
 }
 
-/* Aktif menü alt çizgisi */
-.nav-menu a img {
-    width: 100px;
-    height: auto;
-    margin: auto;
-    display: block;
-}
-
 /* Hamburger ve close iconlar başlangıçta gizli (masaüstü için) */
-.nav-mob-close {
+.nav-mob-close, .nav-mob-open {
     display: none;
 }
 
-.nav-mob-open {
-    display: none;
+/* ===== Responsive Tasarımlar ===== */
+
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 0 30px;
+    }
+    .nav-menu {
+        gap: 45px;
+        font-size: 18px;
+    }
+    .navbar img {
+        width: 180px;
+    }
+    .nav-menu li img {
+        width: 85px;
+    }
+    .nav-connect {
+        padding: 16px 35px;
+        font-size: 15px;
+    }
 }
 
-/* ======= Responsive for mobile ======= */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0 20px;
+    }
+    .nav-menu {
+        gap: 35px;
+        font-size: 17px;
+    }
+    .navbar img {
+        width: 160px;
+    }
+    .nav-menu li img {
+        width: 75px;
+    }
+    .nav-connect {
+        padding: 14px 30px;
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
-        margin: 20px 50px;
+        margin: 20px 30px;
+        padding: 0 15px;
     }
 
     .nav-connect {
         display: none;
     }
 
-    /* Hamburger (menu open) icon */
+    /* Hamburger açma butonu */
     .nav-mob-open {
         display: flex;
         position: fixed;
@@ -98,43 +136,47 @@
         align-items: center;
         justify-content: center;
         z-index: 1003;
-        opacity: 1; /* Hep görünür */
+        opacity: 1;
         transition: opacity 0.3s ease;
     }
-    /* Menü açıkken hamburger ikonu gizlenir */
     .nav-mob-open.hidden {
         opacity: 0;
         pointer-events: none;
     }
-
     .nav-mob-open img {
         width: 30px !important;
         height: 30px !important;
         object-fit: contain;
     }
 
-    /* Close icon */
+    /* Kapatma butonu */
     .nav-mob-close {
         display: flex;
         position: fixed;
         top: 20px;
-        right: -250px; /* Başlangıçta menü ile tamamen gizli */
+        right: -50px; /* Daha iyi pozisyon */
         width: 30px !important;
         height: 30px !important;
         cursor: pointer;
         align-items: center;
         justify-content: center;
         z-index: 1004;
-        transition: right 0.3s ease;
+        transition: right 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        pointer-events: none;
     }
-
+    .nav-mob-close.open {
+        right: 30px;
+        opacity: 1;
+        pointer-events: auto;
+    }
     .nav-mob-close img {
         width: 30px !important;
         height: 30px !important;
         object-fit: contain;
     }
 
-    /* Menü */
+    /* Menü sidebar */
     .nav-menu {
         position: fixed;
         flex-direction: column;
@@ -143,29 +185,43 @@
         gap: 20px;
         background-color: black;
         width: 250px;
-        height: 100%;
+        height: 100vh;
         z-index: 1000;
-        transition: right 0.3s ease;
-        right: -250px; /* Tamamen gizli başlangıçta */
+        transition: right 0.3s ease, opacity 0.3s ease;
+        right: -250px;
         padding-left: 30px;
         padding-top: 70px;
         overflow-y: auto;
-    }
 
+        /* Menü kapalıyken gizli ve tıklanamaz */
+        opacity: 0;
+        pointer-events: none;
+    }
+    .nav-menu.open {
+        right: 0;
+        opacity: 1;
+        pointer-events: auto;
+    }
     .nav-menu li {
         font-size: 20px;
         padding-left: 0;
         flex-direction: row;
         gap: 15px;
     }
+}
 
-    /* Menü açılınca sağa gelir ve görünür */
-    .nav-menu.open {
-        right: 0;
+@media (max-width: 480px) {
+    .navbar {
+        margin: 15px 15px;
+        padding: 0 10px;
     }
-
-    /* Close icon menü açılınca görünür ve sağa gelir */
-    .nav-mob-close.open {
-        right: 30px;
+    .nav-menu li {
+        font-size: 18px;
+    }
+    .navbar img {
+        width: 140px;
+    }
+    .nav-menu li img {
+        width: 60px;
     }
 }
