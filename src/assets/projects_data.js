@@ -38,7 +38,7 @@ const projects_data = [
         p_no: 5,
         p_name: "Stok Takip Sistemi",
         p_img: project5_img,
-        description: "TechDepot teknoloji mağazasının stok yönetimini optimize etmek için geliştirilen bu sistem, iki versiyon halinde uygulanmıştır. İlk versiyon C# Windows Forms ve MS SQL Server, ikinci versiyon ise PyQt5, Qt Designer ve SQLite kullanılarak geliştirilmiştir. Sistem; ürün yönetimi, stok takip, satış, müşteri ve personel yönetimi modüllerini içermektedir.",
+        description: "TechDepot teknoloji mağazasının stok yönetimini optimize etmek için geliştirilen bu sistem, iki versiyon halinde uygulanmıştır. İlk versiyon C# Windows Forms ve MS SQL Server, ikinci versiyon ise PyQt5, Qt Designer ve SQLite kullanılarak geliştirilmiştir. Sistem; ürün yönetimi, stok takip, satış, müşteri ve personel yönetimi, raporlama ve analiz modüllerini içermektedir.",
         tools: ["C#", "MS SQL Server","Qt Designer","PyQt5","SQLite"]
     },
     {
