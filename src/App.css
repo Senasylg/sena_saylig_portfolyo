@@ -22,20 +22,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /* Scrollbar genişliği */
 ::-webkit-scrollbar {
   width: 12px;
@@ -43,7 +37,7 @@
 
 /* Scrollbar track (arka plan) */
 ::-webkit-scrollbar-track {
-  background: black; /* ya da sayfanın arka plan rengi */
+  background: black;
 }
 
 /* Scrollbar thumb (kaydırıcı) */
@@ -57,6 +51,7 @@
   background: linear-gradient(267deg, #00BFFF, #00ff00);
 }
 
+/* Progress bar */
 #progressBar {
   position: fixed;
   top: 0;
@@ -68,6 +63,7 @@
   transition: width 0.2s ease-out;
 }
 
+/* Progress bar sayısal gösterim */
 #progressNumber {
   position: fixed;
   top: 10px;
@@ -82,4 +78,75 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   z-index: 9999;
   pointer-events: none;
+}
+
+/* Mobil (480px ve altı) */
+@media (max-width: 480px) {
+  .App-header {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  #progressNumber {
+    font-size: 12px;
+    padding: 2px 6px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .App-logo {
+    height: 30vmin;
+  }
+}
+
+/* Tablet (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .App-header {
+    font-size: 18px;
+    padding: 18px;
+  }
+
+  #progressNumber {
+    font-size: 13px;
+    padding: 3px 7px;
+    top: 9px;
+    left: 9px;
+  }
+
+  .App-logo {
+    height: 35vmin;
+  }
+}
+
+/* Küçük masaüstü (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .App-header {
+    font-size: 20px;
+    padding: 24px;
+  }
+
+  .App-logo {
+    height: 38vmin;
+  }
+}
+
+/* Büyük ekranlar (1025px ve üzeri) */
+@media (min-width: 1025px) {
+  .App-header {
+    font-size: calc(10px + 2vmin);
+    padding: 32px;
+  }
+
+  .App-logo {
+    height: 40vmin;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
