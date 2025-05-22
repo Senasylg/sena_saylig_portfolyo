@@ -404,7 +404,7 @@
     .contact-details {
         display: flex;
         flex-direction: column;  /* Dikey liste */
-        gap: 12px;               /* Satırlar arası boşluk */
+        gap: 10px;               /* Satırlar arası boşluk */
         align-items: flex-start; /* Tüm liste sola yaslı */
     }
 
