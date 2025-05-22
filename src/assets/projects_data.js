@@ -31,7 +31,7 @@ const projects_data = [
         p_no: 4,
         p_name: "Kavşak Sinyalize Trafik Işığı Simülasyonu",
         p_img: project4_img,
-        description: "Balıkesir Yeniçayırhisar kavşağı için çalıştığım projede, trafik akışını iyileştirmek amacıyla sinyalize trafik ışığı sistemi modellemesi ve simülasyonu yaptım. Gerçek verilerle araç yoğunluğu ve bekleme sürelerini analiz ederek, farklı ışıklandırma senaryolarının etkilerini değerlendirdim.",
+        description: "Balıkesir Yeniçayırhisar kavşağı için çalıştığım projede, trafik akışını iyileştirmek amacıyla sinyalize trafik ışığı sistemi modellemesi ve simülasyonu yaptım. Gerçek verilerle araç yoğunluğunu ve bekleme sürelerini analiz ederek, farklı ışıklandırma senaryolarının etkilerini değerlendirdim.",
         tools: ["Arena Rockwell Simulation", "Minitab", "Excel"]
     },
     {
