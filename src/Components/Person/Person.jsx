@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Person.css';
 import profile_img from '../../assets/person_foto.jpg';
+import linkedin_icon from "../../assets/linkedin_icon.png";
 
 const Person = () => {
     const namePart = "Sena Şaylıg-";
@@ -54,15 +55,24 @@ const Person = () => {
                 Öğrenme yolculuğumda edindiğim bilgileri pratik ve somut projelere dönüştürmekten büyük heyecan duyuyorum. Amacım, sürdürülebilir ve yenilikçi çözümler üreterek mühendisliğin sınırlarını keşfetmek.
             </p>
             <div className="person-action">
-                <div
-                    className="person-connect"
-                    onClick={() => {
-                        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                >
-                    Benimle İletişime Geç
+                <div className="person-action">
+                    <div
+                        className="person-connect"
+                        onClick={() => {
+                            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                    >
+                        Benimle İletişime Geç
+                    </div>
+                    <a
+                        href="https://www.linkedin.com/in/sena-şaylığ-349459316"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="person-resume"
+                    >
+                        Özgeçmişim
+                    </a>
                 </div>
-                <div className="person-resume">Özgeçmişim</div>
             </div>
         </div>
     );
