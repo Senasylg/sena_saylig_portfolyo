@@ -271,6 +271,9 @@
         font-size: 14px;
         padding: 0 5px;
     }
+    .about-achievements hr{
+        width: 40%;
+    }
 }
 
 /* -------- Tablet (481px - 768px) -------- */
@@ -318,6 +321,9 @@
 
     .about-achievement p {
         font-size: 16px;
+    }
+    .about-achievements hr{
+        width: 40%;
     }
 }
 
@@ -368,7 +374,7 @@
     }
 
     .about-achievement {
-        flex: 1 1 200px; /* Minimum 200px genişlikte yayılabilir kutular */
+        flex: 1 1 100px; /* Minimum 200px genişlikte yayılabilir kutular */
         max-width: 250px;
     }
 
