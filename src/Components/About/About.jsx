@@ -18,6 +18,7 @@ const About = () => {
                     <div className="about-para">
                         <p>2022 yılında Balıkesir Üniversitesi Endüstri Mühendisliği bölümünde eğitimime başladım. 2023’te Bilgisayar Mühendisliği Çift Anadal Programı’na kabul edildim. Şu anda Endüstri Mühendisliği 4.sınıf, Bilgisayar Mühendisliği 3.sınıf öğrencisiyim.</p>
                         <p>Beyçelik Gestamp Otomotiv’de atölye stajımda üretim süreçlerini gözlemledim; üretim planlama, kalite ve Ar-Ge gibi birimlerle çalışma fırsatı buldum. Excel VBA ile üretim planlamaya yönelik bir makro geliştirerek planlama sürecini kolaylaştırdım.</p>
+                        <p>Coca-Cola İçecek A.Ş.’de gerçekleştirdiğim işletme stajımda Su Geri Kazanım Sistemlerinin Dijitalleştirilmesi üzerine bir proje yürüttük. Bu kapsamda, sistem verilerini izlemek ve analiz etmek amacıyla Dijital İkiz (Digital Twin) yaklaşımını uyguladık ve Grafana arayüzü üzerinden görselleştirme çalışmalarını gerçekleştirdik. Bu proje sayesinde üretim süreçlerinde sürdürülebilirlik ve enerji verimliliği konularında dijital dönüşüm odaklı bir deneyim kazandım.</p>
                         <p>Ders projelerimde C#, Python, MS SQL Server, AUTOCAD, SOLIDWORKS, Arena Rockwell Simulation ve CATIA kullanarak yazılım, tasarım ve simülasyon çalışmaları yaptım. Gelecekte veri bilimi, makine öğrenimi ve büyük veri alanlarında uzmanlaşarak üretime yönelik çözümler geliştirmeyi hedefliyorum.</p>
                     </div>
                     <div className="about-skills">
