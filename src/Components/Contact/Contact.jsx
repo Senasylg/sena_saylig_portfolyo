@@ -55,9 +55,10 @@ const Contact = () => {
                     <p>Aşağıdaki bilgilerden bana ulaşabilirsiniz.</p>
                     <div className="contact-details">
                         <div className="contact-detail">
-                            <a href="mailto:senasaylig@gmail.com">senasaylig@gmail.com</a>
-                            <img src={mail_icon} alt="Mail"/>
-                            <p>senasaylig@gmail.com</p>
+                            <a href="mailto:senasaylig@gmail.com" className="flex items-center gap-2">
+                                <img src={mail_icon} alt="Mail" className="w-5 h-5" />
+                                <span>senasaylig@gmail.com</span>
+                            </a>
                         </div>
                         <div className="contact-detail">
                             <img src={call_icon} alt=""/> <p>+531 087 13 99</p>
