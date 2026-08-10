@@ -13,8 +13,14 @@ export default function PublicLayout() {
     const { pathname } = useLocation()
 
     // Rota değişince başa dön.
+    // html üzerinde `scroll-behavior: smooth` açık; onu geçici olarak kapatmazsak
+    // sayfa değişiminde yukarı doğru animasyonlu kayma oluyor ("ekran atlıyor").
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' })
+        const root = document.documentElement
+        const previous = root.style.scrollBehavior
+        root.style.scrollBehavior = 'auto'
+        window.scrollTo(0, 0)
+        root.style.scrollBehavior = previous
     }, [pathname])
 
     useEffect(() => {

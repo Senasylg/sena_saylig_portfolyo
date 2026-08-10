@@ -56,7 +56,7 @@ export default function Hero({ projectCount = 0 }) {
               }
 
     return (
-        <section className="relative overflow-hidden pt-28 pb-0 sm:pt-32">
+        <section className="grain relative overflow-hidden pt-28 pb-0 sm:pt-32">
             <div className="bg-grid mask-fade-b pointer-events-none absolute inset-0 -z-10" aria-hidden />
             <div
                 className="bg-accent/18 pointer-events-none absolute -top-32 -right-24 -z-10 h-[460px] w-[460px] rounded-full blur-[130px]"
@@ -126,14 +126,14 @@ export default function Hero({ projectCount = 0 }) {
 
                     {/* --------- Sağ: kimlik kartı --------- */}
                     <motion.aside
-                        className="border-line bg-elev/70 rounded-2xl border p-5 backdrop-blur-sm sm:p-6"
+                        className="ring-gradient bg-elev/70 rounded-2xl p-5 backdrop-blur-md sm:p-6"
                         {...fade(0.2)}
                     >
                         <div className="flex items-center gap-4">
                             <img
                                 src={profile.portrait}
                                 alt={profile.name}
-                                className="border-line h-16 w-16 rounded-xl border object-cover"
+                                className="border-line h-16 w-16 rounded-xl border object-cover object-center"
                                 decoding="async"
                             />
                             <div className="min-w-0">

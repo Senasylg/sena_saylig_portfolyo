@@ -95,14 +95,27 @@ export default function ProjectDetailView({ project, siblings = [], isPreview = 
 
                         <div className="mb-4 flex flex-wrap items-center gap-2">
                             <span
-                                className={`cat-chip rounded-full border px-3 py-1.5 font-mono text-[11px] font-medium tracking-[0.1em] uppercase backdrop-blur-md ${
-                                    project.coverImage ? 'bg-black/40' : ''
+                                className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 font-mono text-[11px] font-semibold tracking-[0.1em] uppercase backdrop-blur-md ${
+                                    project.coverImage
+                                        ? 'border-white/25 bg-black/60 text-white'
+                                        : 'cat-chip'
                                 }`}
                             >
+                                <span
+                                    className="h-1.5 w-1.5 rounded-full"
+                                    style={{ background: 'var(--cat)' }}
+                                    aria-hidden
+                                />
                                 {t(`categories.${project.category}`)}
                             </span>
                             {project.featured && (
-                                <span className="text-warm border-warm/50 inline-flex items-center gap-1.5 rounded-full border bg-black/40 px-3 py-1.5 font-mono text-[11px] font-medium tracking-[0.1em] uppercase backdrop-blur-md">
+                                <span
+                                    className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 font-mono text-[11px] font-semibold tracking-[0.1em] uppercase backdrop-blur-md ${
+                                        project.coverImage
+                                            ? 'border-amber-300/30 bg-black/60 text-amber-300'
+                                            : 'text-warm border-warm/50 bg-warm-soft'
+                                    }`}
+                                >
                                     <Star size={10} fill="currentColor" />
                                     {t('projects.featured')}
                                 </span>
@@ -111,7 +124,7 @@ export default function ProjectDetailView({ project, siblings = [], isPreview = 
                                 <span
                                     className={`rounded-full border px-3 py-1.5 font-mono text-[11px] backdrop-blur-md ${
                                         project.coverImage
-                                            ? 'border-white/25 bg-black/40 text-white/80'
+                                            ? 'border-white/25 bg-black/60 text-white/85'
                                             : 'border-line text-muted'
                                     }`}
                                 >
