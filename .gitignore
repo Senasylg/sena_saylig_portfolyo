@@ -134,3 +134,19 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Vite
+dist/
+.vite/
+
+# Env (Supabase key'leri)
+.env
+.env.local
+.env.*.local
+
+# Editor
+.idea/
+.vscode/
+
+# Eski CRA kodunun yedegi (referans icin lokalde tutuluyor)
+legacy/
