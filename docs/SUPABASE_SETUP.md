@@ -96,6 +96,18 @@ Bu yapılmazsa canlı site salt okunur "demo mod"da kalır.
 
 ---
 
+## 8. Her şeyi tek komutla doğrula
+
+```bash
+npm run check:supabase
+```
+
+Bu komut siteyle aynı yerden (anon anahtarıyla) bağlanır ve sırayla kontrol eder:
+tablolar duruyor mu, seed yüklendi mi, taslak projeler anonim istemciye kapalı mı,
+gelen kutusu gizli mi, anonim istemci yazma yapabiliyor mu. Hepsi yeşilse kurulum sağlamdır.
+
+---
+
 ## Kontrol listesi
 
 - [ ] `localhost:3000/admin/login` açılıyor
