@@ -92,6 +92,11 @@ export default {
         prev: 'Önceki proje',
         contents: 'İçindekiler',
     },
+    courses: {
+        label: 'Eğitim',
+        title: 'Aldığım dersler',
+        total: (n) => `${n} ders`,
+    },
     about: {
         label: 'Hakkımda',
         title: 'Ben kimim?',

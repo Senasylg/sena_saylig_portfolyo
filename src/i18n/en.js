@@ -92,6 +92,11 @@ export default {
         prev: 'Previous project',
         contents: 'Contents',
     },
+    courses: {
+        label: 'Education',
+        title: 'Courses I have taken',
+        total: (n) => `${n} courses`,
+    },
     about: {
         label: 'About',
         title: 'Who I am',

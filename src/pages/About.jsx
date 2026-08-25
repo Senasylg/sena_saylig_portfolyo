@@ -1,6 +1,7 @@
 import { Mail, MapPin, Github, Linkedin, ArrowUpRight } from 'lucide-react'
 import Reveal from '../components/ui/Reveal'
 import Journey from '../components/home/Journey'
+import Courses from '../components/home/Courses'
 import Stack from '../components/home/Stack'
 import FocusAreas from '../components/home/FocusAreas'
 import ContactBlock from '../components/home/ContactBlock'
@@ -131,6 +132,7 @@ export default function About() {
             </section>
 
             <Journey label={t('about.label')} title={t('about.journeyTitle')} />
+            <Courses />
             <FocusAreas />
             <Stack label={t('about.label')} title={t('about.stackTitle')} />
             <ContactBlock />
