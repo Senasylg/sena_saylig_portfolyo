@@ -1,8 +1,9 @@
-import { MapPin } from 'lucide-react'
+import { MapPin, BookOpen, ArrowRight } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
 import Reveal from '../ui/Reveal'
 import { useLanguage } from '../../context/LanguageContext'
 import profile from '../../data/profile'
+import courseGroups from '../../data/courses'
 
 /** Eğitim ve staj geçmişi — kart tabanlı zaman çizelgesi. */
 export default function Journey({ label, title }) {
@@ -38,6 +39,26 @@ export default function Journey({ label, title }) {
                                     <p className="text-muted mt-2.5 text-[15px] leading-relaxed">
                                         {pick(item.body)}
                                     </p>
+                                )}
+                                {/* Eğitim kartlarında o bölümün ders sayısı ve listeye bağlantı */}
+                                {item.coursesGroup && (
+                                    <a
+                                        href="#dersler"
+                                        className="border-line hover:border-accent hover:text-accent text-muted group mt-4 flex items-center gap-2.5 rounded-lg border px-3 py-2.5 text-sm transition-colors"
+                                    >
+                                        <BookOpen size={15} className="text-accent-hi shrink-0" />
+                                        <span className="flex-1">
+                                            {t(
+                                                'courses.departmentCount',
+                                                courseGroups.find((g) => g.id === item.coursesGroup)
+                                                    ?.courses.length ?? 0,
+                                            )}
+                                        </span>
+                                        <ArrowRight
+                                            size={14}
+                                            className="transition-transform group-hover:translate-x-1"
+                                        />
+                                    </a>
                                 )}
                                 {item.tags.length > 0 && (
                                     <div className="border-line mt-4 flex flex-wrap gap-1.5 border-t pt-4">

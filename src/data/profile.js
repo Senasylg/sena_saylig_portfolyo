@@ -141,6 +141,7 @@ export const profile = {
         {
             id: 'education-ie',
             kind: 'education',
+            coursesGroup: 'industrial',
             period: { tr: '2022 — 2026', en: '2022 — 2026' },
             org: 'Balıkesir Üniversitesi',
             location: { tr: 'Balıkesir', en: 'Balıkesir, Türkiye' },
@@ -157,6 +158,7 @@ export const profile = {
         {
             id: 'education-ce',
             kind: 'education',
+            coursesGroup: 'computer',
             period: { tr: '2023 — 2027', en: '2023 — 2027' },
             org: 'Balıkesir Üniversitesi',
             location: { tr: 'Balıkesir', en: 'Balıkesir, Türkiye' },

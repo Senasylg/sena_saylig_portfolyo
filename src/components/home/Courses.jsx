@@ -26,7 +26,7 @@ export default function Courses() {
     const total = courseGroups.reduce((sum, g) => sum + g.courses.length, 0)
 
     return (
-        <section className="mx-auto max-w-[1400px] px-5 py-14 sm:px-8 sm:py-20">
+        <section id="dersler" className="mx-auto max-w-[1400px] px-5 py-14 sm:px-8 sm:py-20 scroll-mt-24">
             <SectionHeading
                 label={t('courses.label')}
                 title={t('courses.title')}

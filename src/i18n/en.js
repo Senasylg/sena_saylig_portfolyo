@@ -96,6 +96,7 @@ export default {
         label: 'Education',
         title: 'Courses I have taken',
         total: (n) => `${n} courses`,
+        departmentCount: (n) => `${n} department courses`,
     },
     about: {
         label: 'About',

@@ -3,6 +3,7 @@ import Manifesto from '../components/home/Manifesto'
 import ProjectCarousel from '../components/projects/ProjectCarousel'
 import FocusAreas from '../components/home/FocusAreas'
 import Journey from '../components/home/Journey'
+import Courses from '../components/home/Courses'
 import Stack from '../components/home/Stack'
 import ContactBlock from '../components/home/ContactBlock'
 import { usePublishedProjects } from '../lib/useProjects'
@@ -22,6 +23,7 @@ export default function Home() {
             <Manifesto />
             <FocusAreas />
             <Journey />
+            <Courses />
             <Stack />
             <ContactBlock />
         </>

@@ -96,6 +96,7 @@ export default {
         label: 'Eğitim',
         title: 'Aldığım dersler',
         total: (n) => `${n} ders`,
+        departmentCount: (n) => `${n} bölüm dersi`,
     },
     about: {
         label: 'Hakkımda',
