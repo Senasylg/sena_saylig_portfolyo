@@ -158,18 +158,18 @@ create policy "admin deletes project images"
 -- ---------------------------------------------------------------------
 -- 5) Mevcut 6 projenin başlangıç verisi
 --
---    NOT: cover_image alanları boş bırakıldı. Görseller şu an uygulama
---    paketinin içinde (src/assets/projects/). Admin panelinden kapak
---    yüklediğinde Storage URL'si buraya yazılır ve o kullanılır.
+--    NOT: cover_image alanları public/projects/ altındaki dosyaları gösterir.
+--    Admin panelinden yeni bir kapak yüklendiğinde onun Storage URL'si bu
+--    değerin yerini alır.
 --
 --    problem / solution / methodology / results / challenges /
 --    future_improvements alanları BİLEREK boş: bu bilgiler elde yok,
 --    uydurulmadı. Admin panelinden doldurulabilir.
 -- ---------------------------------------------------------------------
-insert into public.projects (slug, category, technologies, featured, status, sort_order, content)
+insert into public.projects (slug, category, cover_image, technologies, featured, status, sort_order, content)
 values
 (
-    'stok-takip-sistemi', 'software',
+    'stok-takip-sistemi', 'software', '/projects/stock-tracking.png',
     array['C#', 'MS SQL Server', 'Qt Designer', 'PyQt5', 'SQLite'],
     true, 'published', 1,
     jsonb_build_object(
@@ -188,7 +188,7 @@ values
     )
 ),
 (
-    'kavsak-trafik-simulasyonu', 'simulation',
+    'kavsak-trafik-simulasyonu', 'simulation', '/projects/traffic-simulation.png',
     array['Arena Rockwell Simulation', 'Minitab', 'Excel'],
     true, 'published', 2,
     jsonb_build_object(
@@ -207,7 +207,7 @@ values
     )
 ),
 (
-    'fizikadiyet-web-sitesi', 'web',
+    'fizikadiyet-web-sitesi', 'web', '/projects/fizikadiyet-website.png',
     array['HTML', 'CSS', 'JavaScript', 'React', 'Figma'],
     true, 'published', 3,
     jsonb_build_object(
@@ -226,7 +226,7 @@ values
     )
 ),
 (
-    'elma-ambalaj-hatti-tasarimi', 'design',
+    'elma-ambalaj-hatti-tasarimi', 'design', '/projects/apple-packing-line.png',
     array['SOLIDWORKS'],
     false, 'published', 4,
     jsonb_build_object(
@@ -245,7 +245,7 @@ values
     )
 ),
 (
-    'ergonomik-risk-degerlendirme', 'research',
+    'ergonomik-risk-degerlendirme', 'research', '/projects/ergonomic-risk.jpg',
     array['CATIA', 'SOLIDWORKS'],
     false, 'published', 5,
     jsonb_build_object(
@@ -264,7 +264,7 @@ values
     )
 ),
 (
-    'lego-kepce-tasarimi', 'design',
+    'lego-kepce-tasarimi', 'design', '/projects/lego-excavator.png',
     array['SOLIDWORKS'],
     false, 'published', 6,
     jsonb_build_object(

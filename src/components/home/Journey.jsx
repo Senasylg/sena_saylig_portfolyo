@@ -27,9 +27,11 @@ export default function Journey({ label, title }) {
                                 <h3 className="mt-1.5 text-lg leading-snug font-semibold">
                                     {pick(item.title)}
                                 </h3>
-                                <p className="text-muted mt-2.5 text-[15px] leading-relaxed">
-                                    {pick(item.body)}
-                                </p>
+                                {pick(item.body)?.trim() && (
+                                    <p className="text-muted mt-2.5 text-[15px] leading-relaxed">
+                                        {pick(item.body)}
+                                    </p>
+                                )}
                                 {item.tags.length > 0 && (
                                     <div className="border-line mt-4 flex flex-wrap gap-1.5 border-t pt-4">
                                         {item.tags.map((tag) => (

@@ -12,12 +12,19 @@
  * Supabase bağlandığında aynı veri `supabase/schema.sql` içindeki seed ile eklenir.
  */
 
-import coverLego from '../assets/projects/lego-excavator.png'
-import coverWeb from '../assets/projects/fizikadiyet-website.png'
-import coverLine from '../assets/projects/apple-packing-line.png'
-import coverTraffic from '../assets/projects/traffic-simulation.png'
-import coverStock from '../assets/projects/stock-tracking.png'
-import coverErgo from '../assets/projects/ergonomic-risk.jpg'
+/**
+ * Kapak görselleri public/ altında duruyor (bundle'a import edilmiyor).
+ *
+ * Sebep: Supabase'e geçildiğinde bu yollar veritabanına da yazılabiliyor ve
+ * projelerin görselleri kaybolmuyor. Admin panelinden yeni bir kapak
+ * yüklendiğinde onun Storage URL'si bu değerin yerini alır.
+ */
+const coverLego = '/projects/lego-excavator.png'
+const coverWeb = '/projects/fizikadiyet-website.png'
+const coverLine = '/projects/apple-packing-line.png'
+const coverTraffic = '/projects/traffic-simulation.png'
+const coverStock = '/projects/stock-tracking.png'
+const coverErgo = '/projects/ergonomic-risk.jpg'
 
 /** Kategori kimlikleri — etiketleri i18n sözlüklerinde. */
 export const CATEGORIES = ['design', 'simulation', 'software', 'web', 'research']

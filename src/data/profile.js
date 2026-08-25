@@ -24,8 +24,8 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/sena-şaylığ-349459316',
 
     role: {
-        tr: 'Endüstri & Bilgisayar Mühendisliği Öğrencisi',
-        en: 'Industrial & Computer Engineering Student',
+        tr: 'Endüstri Mühendisi · Bilgisayar Mühendisliği ÇAP',
+        en: 'Industrial Engineer · Computer Engineering Double Major',
     },
 
     // Hero'daki numaralı disiplin şeridi.
@@ -50,19 +50,45 @@ export const profile = {
     // CV dilinden anlatı diline taşınmış hali.
     manifesto: {
         tr: [
-            '2022’de Balıkesir Üniversitesi Endüstri Mühendisliği’nde başladım. Bir yıl sonra Bilgisayar Mühendisliği Çift Anadal Programı’na kabul edildim ve o günden beri iki bölümü paralel yürütüyorum: Endüstri’de 4. sınıf, Bilgisayar’da 3. sınıf.',
+            '2022’de Balıkesir Üniversitesi Endüstri Mühendisliği’nde başladım ve bu bölümden mezun oldum. Bir yıl sonra kabul edildiğim Bilgisayar Mühendisliği Çift Anadal Programı’na ise devam ediyorum.',
             'İki bölümü birlikte okumak bana şunu öğretti: bir süreci iyileştirmek istiyorsan önce onu ölçmen, sonra modellemen, en sonunda da otomatikleştirmen gerekiyor. Projelerimin çoğu tam olarak bu üç adımın bir yerinde duruyor.',
             'Sırada veri bilimi, makine öğrenimi ve büyük veri var. Hedefim bu alanları üretim tarafındaki gerçek problemlere bağlamak — akademik bir merak olarak değil, işe yarayan çözümler olarak.',
         ],
         en: [
-            'I started Industrial Engineering at Balıkesir University in 2022. A year later I was accepted into the Computer Engineering double major program, and I have been running both in parallel ever since: fourth year in Industrial, third year in Computer Engineering.',
+            'I started Industrial Engineering at Balıkesir University in 2022 and have since graduated from it. A year later I was accepted into the Computer Engineering double major programme, which I am still completing.',
             'Studying both taught me one thing: if you want to improve a process, you first have to measure it, then model it, and only then automate it. Most of my projects sit somewhere along those three steps.',
             'Next up: data science, machine learning and big data. My goal is to connect these to real problems on the production side — not as an academic curiosity, but as solutions that actually work.',
         ],
     },
 
     // Gerçek staj / eğitim geçmişi.
+    //
+    // NOT: Ziraat Teknoloji ve Eker stajlarının tarihleri ile içerik açıklamaları
+    // henüz elimizde yok; `body` bilerek boş bırakıldı ve boş açıklamalar arayüzde
+    // hiç render edilmiyor. Bilgi geldiğinde doldurulacak.
     journey: [
+        {
+            id: 'ziraat-teknoloji',
+            period: { tr: 'Staj', en: 'Internship' },
+            org: 'Ziraat Teknoloji A.Ş.',
+            title: {
+                tr: 'Yapay Zeka Uygulamaları Stajyeri',
+                en: 'Artificial Intelligence Applications Intern',
+            },
+            body: { tr: '', en: '' },
+            tags: [],
+        },
+        {
+            id: 'eker',
+            period: { tr: 'Staj', en: 'Internship' },
+            org: 'Eker Süt Ürünleri Gıda San. ve Tic. A.Ş.',
+            title: {
+                tr: 'Bilgi İşlem (IT) Stajyeri',
+                en: 'Information Technology (IT) Intern',
+            },
+            body: { tr: '', en: '' },
+            tags: [],
+        },
         {
             id: 'coca-cola',
             period: { tr: 'İşletme Stajı', en: 'Business Internship' },
@@ -93,15 +119,15 @@ export const profile = {
         },
         {
             id: 'education',
-            period: { tr: '2022 — Devam ediyor', en: '2022 — Ongoing' },
+            period: { tr: 'Eğitim', en: 'Education' },
             org: 'Balıkesir Üniversitesi',
             title: {
-                tr: 'Endüstri Mühendisliği + Bilgisayar Mühendisliği (ÇAP)',
-                en: 'Industrial Engineering + Computer Engineering (Double Major)',
+                tr: 'Endüstri Mühendisliği (mezun) · Bilgisayar Mühendisliği ÇAP (devam ediyor)',
+                en: 'Industrial Engineering (graduated) · Computer Engineering double major (in progress)',
             },
             body: {
-                tr: '2022’de Endüstri Mühendisliği’ne başladım, 2023’te Bilgisayar Mühendisliği Çift Anadal Programı’na kabul edildim. Şu an Endüstri 4. sınıf, Bilgisayar 3. sınıf öğrencisiyim.',
-                en: 'Started Industrial Engineering in 2022 and was accepted into the Computer Engineering double major in 2023. Currently in the fourth year of Industrial and the third year of Computer Engineering.',
+                tr: '2022’de Endüstri Mühendisliği’ne başladım ve bu bölümden mezun oldum. 2023’te kabul edildiğim Bilgisayar Mühendisliği Çift Anadal Programı’na devam ediyorum.',
+                en: 'Started Industrial Engineering in 2022 and graduated from it. Accepted into the Computer Engineering double major in 2023, which is still in progress.',
             },
             tags: [],
         },
