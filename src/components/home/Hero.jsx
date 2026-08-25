@@ -37,7 +37,7 @@ export default function Hero({ projectCount = 0 }) {
     const stats = [
         { value: projectCount || profile.stack.length, label: t('hero.statProjects') },
         {
-            value: profile.journey.filter((item) => item.id !== 'education').length,
+            value: profile.journey.filter((item) => item.kind === 'internship').length,
             label: t('hero.statInternships'),
         },
         { value: profile.focus.length, label: t('hero.statFocus') },

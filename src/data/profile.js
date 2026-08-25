@@ -50,86 +50,109 @@ export const profile = {
     // CV dilinden anlatı diline taşınmış hali.
     manifesto: {
         tr: [
-            '2022’de Balıkesir Üniversitesi Endüstri Mühendisliği’nde başladım ve bu bölümden mezun oldum. Bir yıl sonra kabul edildiğim Bilgisayar Mühendisliği Çift Anadal Programı’na ise devam ediyorum.',
+            '2022’de Balıkesir Üniversitesi Endüstri Mühendisliği’nde başladım ve 2026’da 3,66 AGNO ile bölüm birincisi olarak mezun oldum. Bir yıl sonra kabul edildiğim Bilgisayar Mühendisliği Çift Anadal Programı’na ise devam ediyorum.',
             'İki bölümü birlikte okumak bana şunu öğretti: bir süreci iyileştirmek istiyorsan önce onu ölçmen, sonra modellemen, en sonunda da otomatikleştirmen gerekiyor. Projelerimin çoğu tam olarak bu üç adımın bir yerinde duruyor.',
             'Sırada veri bilimi, makine öğrenimi ve büyük veri var. Hedefim bu alanları üretim tarafındaki gerçek problemlere bağlamak — akademik bir merak olarak değil, işe yarayan çözümler olarak.',
         ],
         en: [
-            'I started Industrial Engineering at Balıkesir University in 2022 and have since graduated from it. A year later I was accepted into the Computer Engineering double major programme, which I am still completing.',
+            'I started Industrial Engineering at Balıkesir University in 2022 and graduated in 2026 at the top of my department with a 3.66 GPA. A year later I was accepted into the Computer Engineering double major programme, which I am still completing.',
             'Studying both taught me one thing: if you want to improve a process, you first have to measure it, then model it, and only then automate it. Most of my projects sit somewhere along those three steps.',
             'Next up: data science, machine learning and big data. My goal is to connect these to real problems on the production side — not as an academic curiosity, but as solutions that actually work.',
         ],
     },
 
-    // Gerçek staj / eğitim geçmişi.
-    //
-    // NOT: Ziraat Teknoloji ve Eker stajlarının tarihleri ile içerik açıklamaları
-    // henüz elimizde yok; `body` bilerek boş bırakıldı ve boş açıklamalar arayüzde
-    // hiç render edilmiyor. Bilgi geldiğinde doldurulacak.
+    // Gerçek staj / eğitim geçmişi — CV'den alındı, en yeniden en eskiye sıralı.
+    // `kind` alanı Hero'daki staj sayacının doğru saymasını sağlıyor.
     journey: [
         {
             id: 'ziraat-teknoloji',
-            period: { tr: 'Staj', en: 'Internship' },
+            kind: 'internship',
+            period: { tr: 'Devam ediyor', en: 'Ongoing' },
             org: 'Ziraat Teknoloji A.Ş.',
             title: {
-                tr: 'Yapay Zeka Uygulamaları Stajyeri',
+                tr: 'Yapay Zekâ Uygulamaları Stajyeri',
                 en: 'Artificial Intelligence Applications Intern',
             },
-            body: { tr: '', en: '' },
-            tags: [],
+            body: {
+                tr: 'Yapay Zekâ Uygulamaları departmanında, bankacılık ürün ve süreçlerine dair soruları doğru verilerle yanıtlayan RAG tabanlı bir Bankacılık Asistanı ve müşteri bildirimlerini kategori, aciliyet ve duygu bazında analiz eden AI destekli bir Mesaj Sınıflandırma ve Yönlendirme Portalı geliştirdim. Çözümleri Gradio Blocks ve özel CSS ile interaktif portallara dönüştürerek toplu Excel yükleme, canlı metrik takibi ve otomatik CRM bilet oluşturma akışlarını otomatikleştirdim. Şu an Python, OpenAI API ve RAG mimarisiyle kurum içi veritabanlarını doğal dille sorgulanabilir kılan, doğrulanabilir bir DB Chatbot geliştiriyorum.',
+                en: 'In the Artificial Intelligence Applications department I built a RAG-based Banking Assistant that answers questions about banking products and processes from verified data, and an AI-powered Message Classification and Routing Portal that analyses customer reports by category, urgency and sentiment. I turned both into interactive portals with Gradio Blocks and custom CSS, automating bulk Excel upload, live metric tracking and automatic CRM ticket creation. I am currently building a verifiable DB Chatbot with Python, the OpenAI API and a RAG architecture that makes internal databases queryable in natural language.',
+            },
+            tags: ['Python', 'RAG', 'OpenAI API', 'Gradio', 'NLP'],
         },
         {
             id: 'eker',
-            period: { tr: 'Staj', en: 'Internship' },
+            kind: 'internship',
+            period: { tr: 'Yazılım Stajı', en: 'Software Internship' },
             org: 'Eker Süt Ürünleri Gıda San. ve Tic. A.Ş.',
             title: {
                 tr: 'Bilgi İşlem (IT) Stajyeri',
                 en: 'Information Technology (IT) Intern',
             },
-            body: { tr: '', en: '' },
-            tags: [],
+            body: {
+                tr: 'Bilgi İşlem departmanındaki yazılım stajımda üç proje geliştirdim. Yetki güvenliği sağlayan Flask dahili API’si, Spring AI tabanlı karar destek servisi, Groq kota mimarisi, deterministik yedek mekanizma ve RAG entegrasyonuna sahip bir Talep Yönetim Otomasyonu kurdum. Lojistik rotalarını iyileştirmek, maliyetleri düşürmek ve yöneticilere anlık analiz sunmak amacıyla Dağıtım Optimizasyonu ve Karar Destek Dashboard’unu hayata geçirdim. Son olarak kurumsal belgeleri dijitalleştirip OCR ve yapay zekâ desteğiyle akıllı arama ve otomatik kategorizasyon sağlayan Yapay Zekâ Destekli Dijital Arşiv Sistemi’ni tamamladım.',
+                en: 'During my software internship in the IT department I delivered three projects. I built a Demand Management Automation with an internal Flask API enforcing authorisation, a Spring AI based decision support service, a Groq quota architecture, a deterministic fallback mechanism and RAG integration. I shipped a Distribution Optimisation and Decision Support Dashboard to improve logistics routes, cut costs and give managers real-time analysis. Finally I completed an AI-Powered Digital Archive System that digitises corporate documents and provides smart search and automatic categorisation through OCR and AI.',
+            },
+            tags: ['Flask', 'Spring AI', 'RAG', 'Groq', 'OCR', 'Optimizasyon'],
         },
         {
             id: 'coca-cola',
-            period: { tr: 'İşletme Stajı', en: 'Business Internship' },
+            kind: 'internship',
+            period: { tr: 'Tem 2025 — Eyl 2025', en: 'Jul 2025 — Sep 2025' },
             org: 'Coca-Cola İçecek A.Ş.',
             title: {
-                tr: 'Su Geri Kazanım Sistemlerinin Dijitalleştirilmesi',
-                en: 'Digitalisation of Water Recovery Systems',
+                tr: 'Stajyer Üretim Mühendisi',
+                en: 'Production Engineering Intern',
             },
             body: {
-                tr: 'Sistem verilerini izlemek ve analiz etmek için Dijital İkiz (Digital Twin) yaklaşımını uyguladık; görselleştirmeleri Grafana arayüzü üzerinden kurduk. Üretimde sürdürülebilirlik ve enerji verimliliği tarafında dijital dönüşüm deneyimi kazandım.',
-                en: 'We applied a Digital Twin approach to monitor and analyse system data, and built the visualisation layer on Grafana. It gave me hands-on experience with digital transformation around sustainability and energy efficiency in production.',
+                tr: 'İki ay boyunca Stajyer Üretim Mühendisi olarak “Su Geri Kazanım Sistemlerinin Dijitalleştirilmesi” projesinde çalıştım. Proje ekibiyle birlikte, manuel sayaç verilerinin AWS platformuna aktarılması ve Grafana panelleriyle takip edilmesi için gereken süreç ön analizlerini yürüttüm. Bu sayede endüstriyel dijitalleşme, sürdürülebilir üretim sistemleri ve veri temelli karar alma konularında deneyim kazandım.',
+                en: 'For two months I worked as a production engineering intern on the “Digitalisation of Water Recovery Systems” project. Together with the project team I ran the process pre-analysis required to move manual meter data onto AWS and track it through Grafana dashboards. It gave me hands-on experience in industrial digitalisation, sustainable production systems and data-driven decision making.',
             },
-            tags: ['Digital Twin', 'Grafana', 'Veri Analizi'],
+            tags: ['AWS', 'Grafana', 'Veri Analizi', 'Dijitalleşme'],
         },
         {
             id: 'beycelik',
-            period: { tr: 'Atölye Stajı', en: 'Workshop Internship' },
+            kind: 'internship',
+            period: { tr: 'Tem 2024 — Ağu 2024', en: 'Jul 2024 — Aug 2024' },
             org: 'Beyçelik Gestamp Otomotiv',
             title: {
-                tr: 'Üretim Planlama için Excel VBA Otomasyonu',
-                en: 'Excel VBA Automation for Production Planning',
+                tr: 'Stajyer Üretim Mühendisi — Pres Üretim',
+                en: 'Production Engineering Intern — Press Production',
             },
             body: {
-                tr: 'Üretim süreçlerini sahada gözlemledim; üretim planlama, kalite ve Ar-Ge birimleriyle çalışma fırsatı buldum. Üretim planlamaya yönelik bir Excel VBA makrosu geliştirerek planlama sürecini kolaylaştırdım.',
-                en: 'I observed production processes on the shop floor and worked alongside the production planning, quality and R&D teams. I built an Excel VBA macro for production planning that streamlined the planning workflow.',
+                tr: 'Pres Üretim Departmanında tamamladığım stajda Tedarik Zinciri ve Üretim Planlama biriminde çalıştım; üretim planlama, kalite, iş geliştirme, Ar-Ge ve lojistik birimlerinin operasyonlarını da inceleme fırsatı buldum. Üretim planlamada manuel yürüyen işleri hızlandırmak için Excel VBA ile merdiven şeması hazırlama sürecini otomatikleştiren bir makro yazdım; veri hazırlama süresi kısalırken süreç verimliliği arttı.',
+                en: 'During my internship in the Press Production department I worked with the Supply Chain and Production Planning unit, and also had the chance to observe operations in production planning, quality, business development, R&D and logistics. To speed up manual work in production planning I wrote an Excel VBA macro that automates the preparation of ladder diagrams, shortening data preparation time and improving process efficiency.',
             },
-            tags: ['Excel VBA', 'Üretim Planlama'],
+            tags: ['Excel VBA', 'Üretim Planlama', 'Tedarik Zinciri'],
         },
         {
-            id: 'education',
-            period: { tr: 'Eğitim', en: 'Education' },
+            id: 'education-ie',
+            kind: 'education',
+            period: { tr: '2022 — 2026', en: '2022 — 2026' },
             org: 'Balıkesir Üniversitesi',
             title: {
-                tr: 'Endüstri Mühendisliği (mezun) · Bilgisayar Mühendisliği ÇAP (devam ediyor)',
-                en: 'Industrial Engineering (graduated) · Computer Engineering double major (in progress)',
+                tr: 'Endüstri Mühendisliği — Bölüm Birincisi',
+                en: 'Industrial Engineering — Top of the Department',
             },
             body: {
-                tr: '2022’de Endüstri Mühendisliği’ne başladım ve bu bölümden mezun oldum. 2023’te kabul edildiğim Bilgisayar Mühendisliği Çift Anadal Programı’na devam ediyorum.',
-                en: 'Started Industrial Engineering in 2022 and graduated from it. Accepted into the Computer Engineering double major in 2023, which is still in progress.',
+                tr: 'Lisans derecesi. 3,66 AGNO ile bölüm birincisi olarak mezun oldum.',
+                en: 'Bachelor degree. Graduated top of the department with a 3.66 GPA.',
             },
-            tags: [],
+            tags: ['AGNO 3,66'],
+        },
+        {
+            id: 'education-ce',
+            kind: 'education',
+            period: { tr: '2023 — 2027', en: '2023 — 2027' },
+            org: 'Balıkesir Üniversitesi',
+            title: {
+                tr: 'Bilgisayar Mühendisliği (Çift Anadal) — devam ediyor',
+                en: 'Computer Engineering (Double Major) — in progress',
+            },
+            body: {
+                tr: 'Çift anadal lisans programı, 3,34 AGNO ile devam ediyor.',
+                en: 'Double major bachelor programme, in progress with a 3.34 GPA.',
+            },
+            tags: ['AGNO 3,34'],
         },
     ],
 
