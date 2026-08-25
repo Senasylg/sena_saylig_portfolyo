@@ -150,10 +150,29 @@ export const profile = {
                 en: 'Industrial Engineering — Top of the Department',
             },
             body: {
-                tr: 'Lisans derecesi. 3,70 ortalamayla bölüm birincisi olarak mezun oldum.',
-                en: 'Bachelor degree. Graduated top of the department with a 3.70 GPA.',
+                tr: 'Mühendislik Fakültesi, lisans derecesi. Temmuz 2026’da 3,70 ortalamayla bölüm birincisi olarak mezun oldum.',
+                en: 'Faculty of Engineering, bachelor degree. Graduated in July 2026 at the top of the department with a 3.70 GPA.',
             },
-            tags: [{ tr: 'Ortalama 3,70', en: 'GPA 3.70' }],
+            // Transkriptteki gerçek veriler.
+            highlights: [
+                { tr: '158 kredi tamamlandı', en: '158 credits completed' },
+                {
+                    tr: 'Bitirme çalışması: Endüstri Mühendisliği Tasarımı I & II',
+                    en: 'Capstone: Industrial Engineering Design I & II',
+                },
+                {
+                    tr: 'Zorunlu stajlar: Beyçelik Gestamp (atölye), Coca-Cola İçecek (işletme)',
+                    en: 'Mandatory internships: Beyçelik Gestamp (workshop), Coca-Cola İçecek (business)',
+                },
+                {
+                    tr: 'Ağırlık: yöneylem araştırması, simülasyon, üretim planlama',
+                    en: 'Focus: operations research, simulation, production planning',
+                },
+            ],
+            tags: [
+                { tr: 'Ortalama 3,70', en: 'GPA 3.70' },
+                { tr: 'Bölüm Birincisi', en: 'Top of Department' },
+            ],
         },
         {
             id: 'education-ce',
@@ -167,10 +186,24 @@ export const profile = {
                 en: 'Computer Engineering (Double Major) — in progress',
             },
             body: {
-                tr: 'Çift anadal lisans programı, hâlen devam ediyor.',
-                en: 'Double major bachelor programme, currently in progress.',
+                tr: 'Mühendislik Fakültesi, çift anadal lisans programı. 2023’te kabul edildim, hâlen devam ediyor.',
+                en: 'Faculty of Engineering, double major bachelor programme. Accepted in 2023, currently in progress.',
             },
-            tags: [],
+            highlights: [
+                {
+                    tr: 'Yazılım stajları: Eker Süt Ürünleri, Ziraat Teknoloji',
+                    en: 'Software internships: Eker Süt Ürünleri, Ziraat Teknoloji',
+                },
+                {
+                    tr: 'Öne çıkan dersler: Yapay Zeka Teknikleri, Makine Öğrenmesi, Algoritma Analizi',
+                    en: 'Notable courses: AI Techniques, Machine Learning, Algorithm Analysis',
+                },
+                {
+                    tr: 'Ağırlık: yapay zekâ, veri ve yazılım mimarisi',
+                    en: 'Focus: artificial intelligence, data and software architecture',
+                },
+            ],
+            tags: [{ tr: 'Devam ediyor', en: 'In progress' }],
         },
     ],
 

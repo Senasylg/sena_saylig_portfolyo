@@ -6,7 +6,7 @@ export default function SectionHeading({ label, title, action, className = '' })
             <div>
                 {label && (
                     <div className="label-mono mb-2.5 flex items-center gap-2">
-                        <span className="bg-accent inline-block h-px w-6" />
+                        <span className="bar-gradient inline-block h-[3px] w-8 rounded-full" />
                         {label}
                     </div>
                 )}

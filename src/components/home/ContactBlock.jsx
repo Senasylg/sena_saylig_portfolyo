@@ -21,7 +21,7 @@ export default function ContactBlock() {
                     <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
                         <div>
                             <div className="label-mono mb-4 flex items-center gap-2">
-                                <span className="bg-accent inline-block h-px w-6" />
+                                <span className="bar-gradient inline-block h-[3px] w-8 rounded-full" />
                                 {t('home.contactLabel')}
                             </div>
                             <h2 className="max-w-2xl text-3xl leading-[1.1] font-bold sm:text-5xl">

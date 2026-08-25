@@ -1,9 +1,19 @@
-import { MapPin, BookOpen, ArrowRight } from 'lucide-react'
+import { MapPin, BookOpen, ArrowRight, Check } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
 import Reveal from '../ui/Reveal'
 import { useLanguage } from '../../context/LanguageContext'
 import profile from '../../data/profile'
 import courseGroups from '../../data/courses'
+
+/** Kartların sırayla aldığı vurgu renkleri. */
+const CARD_COLORS = [
+    'var(--cat-ai)',
+    'var(--cat-software)',
+    'var(--cat-web)',
+    'var(--cat-optimization)',
+    'var(--cat-design)',
+    'var(--cat-research)',
+]
 
 /** Eğitim ve staj geçmişi — kart tabanlı zaman çizelgesi. */
 export default function Journey({ label, title }) {
@@ -20,12 +30,24 @@ export default function Journey({ label, title }) {
                 <div className="grid gap-4 lg:grid-cols-3">
                     {profile.journey.map((item, index) => (
                         <Reveal key={item.id} delay={index * 0.06}>
-                            <article className="border-line bg-bg h-full rounded-2xl border p-5">
-                                <div className="mb-3 flex items-center justify-between gap-3">
+                            <article
+                                style={{ '--cat': CARD_COLORS[index % CARD_COLORS.length] }}
+                                className="border-line bg-bg card-hover relative h-full overflow-hidden rounded-2xl border p-5"
+                            >
+                                {/* Kartın üstünde ince renk şeridi */}
+                                <span
+                                    className="absolute inset-x-0 top-0 h-1"
+                                    style={{ background: 'var(--cat)' }}
+                                    aria-hidden
+                                />
+                                <div className="mt-1 mb-3 flex items-center justify-between gap-3">
                                     <span className="label-mono">{pick(item.period)}</span>
-                                    <span className="bg-accent h-2 w-2 rounded-full" />
+                                    <span
+                                        className="h-2.5 w-2.5 rounded-full"
+                                        style={{ background: 'var(--cat)' }}
+                                    />
                                 </div>
-                                <div className="text-accent text-sm font-semibold">{item.org}</div>
+                                <div className="cat-text text-sm font-semibold">{item.org}</div>
                                 {pick(item.location)?.trim() && (
                                     <div className="text-faint mt-1 flex items-center gap-1.5 text-xs">
                                         <MapPin size={12} className="shrink-0" />
@@ -40,6 +62,24 @@ export default function Journey({ label, title }) {
                                         {pick(item.body)}
                                     </p>
                                 )}
+                                {/* Öne çıkan maddeler (şu an yalnızca eğitim kartlarında) */}
+                                {item.highlights?.length > 0 && (
+                                    <ul className="mt-4 space-y-2">
+                                        {item.highlights.map((h) => (
+                                            <li
+                                                key={pick(h)}
+                                                className="text-muted flex items-start gap-2.5 text-sm leading-relaxed"
+                                            >
+                                                <Check
+                                                    size={14}
+                                                    className="text-accent-hi mt-1 shrink-0"
+                                                />
+                                                {pick(h)}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+
                                 {/* Eğitim kartlarında o bölümün ders sayısı ve listeye bağlantı */}
                                 {item.coursesGroup && (
                                     <a

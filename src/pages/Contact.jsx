@@ -71,7 +71,7 @@ export default function Contact() {
             <div className="mx-auto max-w-[1400px] px-5 pt-28 pb-20 sm:px-8 sm:pt-32">
                 <Reveal>
                     <div className="label-mono mb-3 flex items-center gap-2">
-                        <span className="bg-accent inline-block h-px w-6" />
+                        <span className="bar-gradient inline-block h-[3px] w-8 rounded-full" />
                         {t('contact.label')}
                     </div>
                     <h1 className="text-4xl font-bold tracking-[-0.03em] sm:text-6xl">

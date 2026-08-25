@@ -34,14 +34,20 @@ export default function Hero({ projectCount = 0 }) {
     }, [tagline, reduced])
 
     // Sayaçlar mevcut gerçek veriden türetiliyor — sabit/uydurma sayı yok.
+    // Her sayaç farklı bir kategori renginde — sayfaya renk katıyor.
     const stats = [
-        { value: projectCount || profile.stack.length, label: t('hero.statProjects') },
+        {
+            value: projectCount || profile.stack.length,
+            label: t('hero.statProjects'),
+            color: 'var(--cat-software)',
+        },
         {
             value: profile.journey.filter((item) => item.kind === 'internship').length,
             label: t('hero.statInternships'),
+            color: 'var(--cat-ai)',
         },
-        { value: profile.focus.length, label: t('hero.statFocus') },
-        { value: 2, label: t('hero.statMajors') },
+        { value: profile.focus.length, label: t('hero.statFocus'), color: 'var(--cat-web)' },
+        { value: 2, label: t('hero.statMajors'), color: 'var(--cat-design)' },
     ]
 
     const marquee = [...profile.disciplines, ...profile.disciplines]
@@ -59,11 +65,15 @@ export default function Hero({ projectCount = 0 }) {
         <section className="grain relative overflow-hidden pt-28 pb-0 sm:pt-32">
             <div className="bg-grid mask-fade-b pointer-events-none absolute inset-0 -z-10" aria-hidden />
             <div
-                className="bg-accent/18 pointer-events-none absolute -top-32 -right-24 -z-10 h-[460px] w-[460px] rounded-full blur-[130px]"
+                className="bg-accent/25 animate-aurora pointer-events-none absolute -top-32 -right-24 -z-10 h-[460px] w-[460px] rounded-full blur-[130px]"
                 aria-hidden
             />
             <div
-                className="bg-warm/10 pointer-events-none absolute -bottom-40 -left-32 -z-10 h-[420px] w-[420px] rounded-full blur-[140px]"
+                className="bg-warm/18 animate-aurora-slow pointer-events-none absolute -bottom-40 -left-32 -z-10 h-[420px] w-[420px] rounded-full blur-[140px]"
+                aria-hidden
+            />
+            <div
+                className="bg-accent-hi/18 animate-aurora pointer-events-none absolute top-1/3 left-1/4 -z-10 h-[380px] w-[380px] rounded-full blur-[150px]"
                 aria-hidden
             />
 
@@ -126,7 +136,7 @@ export default function Hero({ projectCount = 0 }) {
 
                     {/* --------- Sağ: kimlik kartı --------- */}
                     <motion.aside
-                        className="ring-gradient bg-elev/70 rounded-2xl p-5 backdrop-blur-md sm:p-6"
+                        className="ring-animated bg-elev/80 rounded-2xl p-5 backdrop-blur-md sm:p-6"
                         {...fade(0.2)}
                     >
                         <div className="flex items-center gap-4">
@@ -165,7 +175,12 @@ export default function Hero({ projectCount = 0 }) {
                         <div className="border-line mt-5 grid grid-cols-4 gap-2 border-t pt-5">
                             {stats.map((stat) => (
                                 <div key={stat.label}>
-                                    <div className="text-accent text-xl font-bold">{stat.value}</div>
+                                    <div
+                                        className="text-xl font-bold"
+                                        style={{ color: stat.color }}
+                                    >
+                                        {stat.value}
+                                    </div>
                                     <div className="text-faint mt-0.5 text-[11px] leading-tight">
                                         {stat.label}
                                     </div>

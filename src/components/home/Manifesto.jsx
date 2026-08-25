@@ -13,7 +13,7 @@ export default function Manifesto() {
                 <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
                     <Reveal>
                         <div className="label-mono mb-4 flex items-center gap-2">
-                            <span className="bg-accent inline-block h-px w-6" />
+                            <span className="bar-gradient inline-block h-[3px] w-8 rounded-full" />
                             {t('home.aboutLabel')}
                         </div>
                         <div className="border-line relative aspect-[4/5] max-w-xs overflow-hidden rounded-2xl border">
