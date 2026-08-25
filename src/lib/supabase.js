@@ -1,6 +1,10 @@
 import { createClient } from '@supabase/supabase-js'
 
+// Supabase panelinde "Project URL" yerine REST endpoint'i kopyalamak yaygin bir hata;
+// sonundaki /rest/v1 kirpilmazsa tum istekler 404 doner.
 const url = import.meta.env.VITE_SUPABASE_URL?.trim()
+    .replace(/\/+$/, '')
+    .replace(/\/rest\/v1$/, '')
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY?.trim()
 
 /**

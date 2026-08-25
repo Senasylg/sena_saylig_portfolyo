@@ -31,12 +31,17 @@ export const profile = {
         en: 'Industrial Engineer · Computer Engineering Double Major',
     },
 
-    // Hero'daki numaralı disiplin şeridi.
+    // Hero'daki numaralı disiplin şeridi (Hakkımda sayfasında da kart olarak çıkıyor).
+    // Hepsi gerçekten çalışılan alanlar: stajlar, dersler ve projelerden geliyor.
     disciplines: [
         { no: '01', tr: 'Endüstri', en: 'Industrial' },
         { no: '02', tr: 'Yazılım', en: 'Software' },
         { no: '03', tr: 'Yapay Zekâ', en: 'Artificial Intelligence' },
-        { no: '04', tr: 'Optimizasyon', en: 'Optimisation' },
+        { no: '04', tr: 'Makine Öğrenmesi', en: 'Machine Learning' },
+        { no: '05', tr: 'Veri', en: 'Data' },
+        { no: '06', tr: 'Optimizasyon', en: 'Optimisation' },
+        { no: '07', tr: 'Simülasyon', en: 'Simulation' },
+        { no: '08', tr: 'Otomasyon', en: 'Automation' },
     ],
 
     tagline: {
