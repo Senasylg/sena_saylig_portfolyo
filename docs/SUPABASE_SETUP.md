@@ -22,14 +22,17 @@ bir daha kod yazman gerekmez.
 ## 2. Şemayı kur
 
 1. Sol menüden **SQL Editor** → **New query**
-2. Bu depodaki [`supabase/schema.sql`](../supabase/schema.sql) dosyasının **tamamını** kopyalayıp yapıştır.
-3. **Run**
+2. Bu depodaki [`supabase/schema.sql`](../supabase/schema.sql) dosyasının **tamamını** kopyalayıp yapıştır → **Run**
+3. Sonra **New query** açıp [`supabase/seed.sql`](../supabase/seed.sql) dosyasının tamamını yapıştır → **Run**
 
-Bu adım şunları oluşturur:
+Bu iki adım şunları oluşturur:
 - `projects`, `messages`, `admins` tabloları
 - Row Level Security politikaları (asıl güvenlik katmanı)
 - `project-images` storage bucket'ı (5 MB sınırı + yalnızca görsel tipleri)
-- Mevcut 6 projenin başlangıç kaydı
+- Mevcut **18 projenin** başlangıç kaydı (kapak görselleriyle birlikte)
+
+> `seed.sql`, `src/data/seedProjects.js` içinden üretilir. Kodda proje verisini
+> değiştirirsen `node supabase/generate-seed.mjs` ile yeniden üretebilirsin.
 
 ## 3. Kendine kullanıcı oluştur
 
@@ -97,7 +100,7 @@ Bu yapılmazsa canlı site salt okunur "demo mod"da kalır.
 
 - [ ] `localhost:3000/admin/login` açılıyor
 - [ ] E-posta + şifre ile giriş yapabiliyorum
-- [ ] Dashboard'da 6 proje listeleniyor
+- [ ] Dashboard'da 18 proje listeleniyor
 - [ ] Yeni proje ekleyip kapak görseli yükleyebiliyorum
 - [ ] Taslak kaydettiğim proje herkese açık `/projects` sayfasında **görünmüyor**
 - [ ] Yayınladığımda `/projects/slug` adresi açılıyor

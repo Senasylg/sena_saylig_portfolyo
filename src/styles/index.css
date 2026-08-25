@@ -36,6 +36,8 @@
     --cat-software: #0e7490;
     --cat-web: #047857;
     --cat-research: #be123c;
+    --cat-ai: #7c3aed;
+    --cat-optimization: #b45309;
 }
 
 .dark {
@@ -62,6 +64,8 @@
     --cat-software: #3dd9e8;
     --cat-web: #4ade9c;
     --cat-research: #ff8fa8;
+    --cat-ai: #c4b5fd;
+    --cat-optimization: #fcd34d;
 }
 
 @theme inline {

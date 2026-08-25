@@ -11,6 +11,8 @@ const VARS = {
     software: 'var(--cat-software)',
     web: 'var(--cat-web)',
     research: 'var(--cat-research)',
+    ai: 'var(--cat-ai)',
+    optimization: 'var(--cat-optimization)',
 }
 
 export function categoryStyle(category) {

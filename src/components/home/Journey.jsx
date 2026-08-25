@@ -1,3 +1,4 @@
+import { MapPin } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
 import Reveal from '../ui/Reveal'
 import { useLanguage } from '../../context/LanguageContext'
@@ -24,6 +25,12 @@ export default function Journey({ label, title }) {
                                     <span className="bg-accent h-2 w-2 rounded-full" />
                                 </div>
                                 <div className="text-accent text-sm font-semibold">{item.org}</div>
+                                {pick(item.location)?.trim() && (
+                                    <div className="text-faint mt-1 flex items-center gap-1.5 text-xs">
+                                        <MapPin size={12} className="shrink-0" />
+                                        {pick(item.location)}
+                                    </div>
+                                )}
                                 <h3 className="mt-1.5 text-lg leading-snug font-semibold">
                                     {pick(item.title)}
                                 </h3>
@@ -34,14 +41,18 @@ export default function Journey({ label, title }) {
                                 )}
                                 {item.tags.length > 0 && (
                                     <div className="border-line mt-4 flex flex-wrap gap-1.5 border-t pt-4">
-                                        {item.tags.map((tag) => (
-                                            <span
-                                                key={tag}
-                                                className="border-line bg-surface text-muted rounded-md border px-2 py-1 font-mono text-[10.5px]"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
+                                        {item.tags.map((tag) => {
+                                            // Etiket düz metin ya da { tr, en } olabilir.
+                                            const label = typeof tag === 'string' ? tag : pick(tag)
+                                            return (
+                                                <span
+                                                    key={label}
+                                                    className="border-line bg-surface text-muted rounded-md border px-2 py-1 font-mono text-[10.5px]"
+                                                >
+                                                    {label}
+                                                </span>
+                                            )
+                                        })}
                                     </div>
                                 )}
                             </article>
